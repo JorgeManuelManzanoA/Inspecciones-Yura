@@ -1,0 +1,30 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import ArrowSec from '../icons/arrow-sec.tsx'
+---
+
+<MainLayout title = 'Inicio'>
+	<section class="banner w-full bg-no-repeat bg-cover h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center">
+		<div class="lg:max-w-[1200px] w-full mx-auto flex flex-col">
+			<h1 class="text-white bonder text-[40px] leading-[50px] md:text-[60px] xl:text-[85px] pb-4 md:leading-[106.25px] w-full xl:max-w-[50%]"> Inspecciones YURA S.A. </h1>
+		</div>
+	</section>
+
+	<section class="mb-[60px] lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[60px] lg:pt-[80px] justify-between ">
+		<div class="w-full max-w-[400px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+			<h3 class="as bonder text-[25px] md:text-[30px] leading-loose">REALIZAR INSPECCION</h3>
+			<p class="md:text-[20px] tracking-tight text-text-gray leading-[40px] text-center">Iniciar una nueva inspección</p>
+			<div class="flex items-center justify-end">
+				<a href="/inspeccion" class="text-[20px] tracking-tight bonder gap-2 py-4 md:py-8 flex items-center"> Vamos <ArrowSec></ArrowSec></a>
+			</div>
+		</div>
+		<div class="w-full max-w-[400px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+			<h3 class="as bonder text-[25px] md:text-[30px] leading-loose">REGISTRO</h3>
+			<p class="md:text-[20px] tracking-tight text-text-gray leading-[40px] text-center">Registro de inspecciones previas</p>
+			<div class="flex items-center justify-end">
+				<a href="https://docs.google.com/spreadsheets/d/1DtuCpZq-qTZ5RTtH5FXckQjI9YmpW5GiH2OR4K93gWM/edit#gid=0" class="text-[20px] tracking-tight bonder gap-2 py-4 md:py-8 flex items-center" target="_blank"> Vamos <ArrowSec></ArrowSec></a>
+			</div>
+		</div>
+	</section>
+</MainLayout>
+

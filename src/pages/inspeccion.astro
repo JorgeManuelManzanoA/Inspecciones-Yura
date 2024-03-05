@@ -1,0 +1,2248 @@
+---
+import MainLayout from '../layouts/main-layout.astro';
+---
+
+<MainLayout title='Inspección'>
+    <section id="mainSection" class="flex flex-col pt-[140px] md:flex-row pb-[30px]">
+        <div class="w-full md:w-1/6 mr-4">
+            <div class="bg-gray-100 shadow-md rounded-md p-6">
+                <h2 class="text-center bonder mb-4 mt-4">Piroproceso</h2>
+                <div id="list1" class="overflow-x-auto flex flex-row md:flex-col sm:flex-row">
+                    <button class="oswald instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance1" data-target="ins_inter">Intercambiador</button>
+                    <button class="oswald instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance2" data-target="ins_horn">Horno</button>
+                    <button class="oswald instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance3" data-target="ins_quem">Quemador</button>
+                    <button class="oswald instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance4" data-target="ins_enfri">Enfriador</button>
+                </div>
+                <h2 class="text-center bonder mb-4 mt-4">Loesche</h2>
+                <div id="list2" class="overflow-x-auto flex flex-row md:flex-col sm:flex-row">
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance5" data-target="ins_loesche_3">Molino 3</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance6" data-target="ins_loesche_7">Molino 7</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance7" data-target="ins_gen_mol">Inspeccion general de molino</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance8" data-target="ins_gen_clas">Inspeccion general de clasificador</button>
+                </div>
+                <h2 class="text-center bonder mb-4 mt-4">Molino de bola</h2>
+                <div id="list3" class="overflow-x-auto flex flex-row md:flex-col sm:flex-row">
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance9" data-target="ins_cam_sec">Camara de secado</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance10" data-target="ins_esp_ent">Espejo de entrada</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance11" data-target="ins_con_ent">Cono de entrada</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance12" data-target="ins_blin_1_cam">Blindaje 1° camara</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance13" data-target="ins_tab_cen">Tabique central</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance14" data-target="ins_blin_2_cam">Blindaje 2° camara</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance15" data-target="ins_tab_sal">Tabique de salida</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance16" data-target="ins_iny_agu_sal">Inyec. de agua a la salida</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance17" data-target="ins_air_fal">Aire falso</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance18" data-target="ins_ven_mol">Ventilacion del molino</button>
+                    <button class="instance mb-1 w-full bg-blue-500 hover:bg-azul_yura text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline" id="instance19" data-target="ins_air_fal_2_pun">Aire falso entre dos puntos</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-5/6">
+            <div class="bg-white-200 shadow-md rounded-md p-6 h-full overflow-y-auto">
+                <div id="content"> 
+                    <h1 class="oswald text-[25px] md:text-[30px] mt-[40px] mb-[30px] font-semibold text-center" >Bienvenido</h1>
+                    <h2 class="oswald text-[18px] md:text-[20px] mb-[40px] text-center">Por favor selecione el apartado donde desee inicar la inspección</h2>
+                </div> 
+                <button id="enviarDatos" class="hidden oswald instance mt-[10px] mb-[20px] mb-1 w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Terminar inspeccion</button>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- L1 -->
+    <template id="ins_inter" class="hidden">
+            <div class="header">
+                <h2 class="text-lg font-semibold mb-4">Inspección de Intercambiador</h2>
+            </div>
+            <form class="formulario" id="formulario_inter">
+                <label for="tem_riser">Temperatura del Riser</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_riser" name="tem_riser" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="tem_ent_cal">Temperatura Entrada al Calcinador</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_ent_cal" name="tem_ent_cal" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="tem_ter_ent_cal">Temperatura Aire Terciario Entrada Calcinador</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_ter_ent_cal" name="tem_ter_ent_cal" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="tem_cic_iv">T° Descarga Ciclon IV</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_cic_iv" name="tem_cic_iv" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="tem_gas_cic_iv">T° Gases Ciclon IV</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_gas_cic_iv" name="tem_gas_cic_iv" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="tem_cic_gem">T° Salida Ciclones Gemelos</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="tem_cic_gem" name="tem_cic_gem" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="ana_sal_tor">Analizador Salida de la Torre</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="ana_sal_tor" name="ana_sal_tor" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="vel_id_fan">Velocidad ID Fan</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="vel_id_fan" name="vel_id_fan" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="pres_sal_gas_id">Presion Salida de Gases del ID</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="pres_sal_gas_id" name="pres_sal_gas_id" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <label for="dam_air_ter">Damper Aire Terciario</label>
+                <div class="contenedor-input mt-2 mb-2"><input type="text" id="dam_air_ter" name="dam_air_ter" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                <div class="contenedor-boton">
+                    <button type="button" id="botonGuardar1" class="instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"> Guardar datos</button>
+                </div>
+            </form>
+        <script>
+            formulario1 = document.getElementById('formulario_inter');
+            botonGuardar1 = document.getElementById('botonGuardar1');
+            registrado1 = false;
+
+            if (typeof tem_riserValue !== 'undefined') {document.getElementById('tem_riser').value = tem_riserValue;}
+            if (typeof tem_ent_calValue !== 'undefined') {document.getElementById('tem_ent_cal').value = tem_ent_calValue;}
+            if (typeof tem_ter_ent_calValue !== 'undefined') {document.getElementById('tem_ter_ent_cal').value = tem_ter_ent_calValue;}
+            if (typeof tem_cic_ivValue !== 'undefined') {document.getElementById('tem_cic_iv').value = tem_cic_ivValue;}
+            if (typeof tem_gas_cic_ivValue !== 'undefined') {document.getElementById('tem_gas_cic_iv').value = tem_gas_cic_ivValue;}
+            if (typeof tem_cic_gemValue !== 'undefined') {document.getElementById('tem_cic_gem').value = tem_cic_gemValue;}
+            if (typeof ana_sal_torValue !== 'undefined') {document.getElementById('ana_sal_tor').value = ana_sal_torValue;}
+            if (typeof vel_id_fanValue !== 'undefined') {document.getElementById('vel_id_fan').value = vel_id_fanValue;}
+            if (typeof pres_sal_gas_idValue !== 'undefined') {document.getElementById('pres_sal_gas_id').value = pres_sal_gas_idValue;}
+            if (typeof dam_air_terValue !== 'undefined') {document.getElementById('dam_air_ter').value = dam_air_terValue;}
+
+            if (localStorage.getItem('tem_riserValue')) {tem_riserValue = localStorage.getItem('tem_riserValue'); document.getElementById('tem_riser').value = tem_riserValue;}
+            if (localStorage.getItem('tem_ent_calValue')) {tem_ent_calValue = localStorage.getItem('tem_ent_calValue'); document.getElementById('tem_ent_cal').value = tem_ent_calValue;}
+            if (localStorage.getItem('tem_ter_ent_calValue')) {tem_ter_ent_calValue = localStorage.getItem('tem_ter_ent_calValue'); document.getElementById('tem_ter_ent_cal').value = tem_ter_ent_calValue;}
+            if (localStorage.getItem('tem_cic_ivValue')) {tem_cic_ivValue = localStorage.getItem('tem_cic_ivValue'); document.getElementById('tem_cic_iv').value = tem_cic_ivValue;}
+            if (localStorage.getItem('tem_gas_cic_ivValue')) {tem_gas_cic_ivValue = localStorage.getItem('tem_gas_cic_ivValue'); document.getElementById('tem_gas_cic_iv').value = tem_gas_cic_ivValue;}
+            if (localStorage.getItem('tem_cic_gemValue')) {tem_cic_gemValue = localStorage.getItem('tem_cic_gemValue'); document.getElementById('tem_cic_gem').value = tem_cic_gemValue;}
+            if (localStorage.getItem('ana_sal_torValue')) {ana_sal_torValue = localStorage.getItem('ana_sal_torValue'); document.getElementById('ana_sal_tor').value = ana_sal_torValue;}
+            if (localStorage.getItem('vel_id_fanValue')) {vel_id_fanValue = localStorage.getItem('vel_id_fanValue'); document.getElementById('vel_id_fan').value = vel_id_fanValue;}
+            if (localStorage.getItem('pres_sal_gas_idValue')) {pres_sal_gas_idValue = localStorage.getItem('pres_sal_gas_idValue'); document.getElementById('pres_sal_gas_id').value = pres_sal_gas_idValue;}
+            if (localStorage.getItem('dam_air_terValue')) {dam_air_terValue = localStorage.getItem('dam_air_terValue'); document.getElementById('dam_air_ter').value = dam_air_terValue;}
+
+            botonGuardar1.addEventListener('click', () => {
+                const inputs = formulario1.querySelectorAll('input');
+                
+                if (registrado1) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar1.style.backgroundColor = '';
+                    botonGuardar1.textContent = 'Guardar datos';
+                    botonGuardar1.addEventListener('mouseover', () => {botonGuardar1.style.backgroundColor = '';});
+                    botonGuardar1.addEventListener('mouseout', () => {botonGuardar1.style.backgroundColor = '';});
+                    document.getElementById('instance1').classList.remove('bg-blue-800');
+                    document.getElementById('instance1').classList.add('bg-blue-500');
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar1.style.backgroundColor = 'green';
+                    botonGuardar1.textContent = 'Datos guardados!';
+                    botonGuardar1.addEventListener('mouseover', () => {botonGuardar1.style.backgroundColor = '#006400';});
+                    botonGuardar1.addEventListener('mouseout', () => {botonGuardar1.style.backgroundColor = 'green';});
+
+                    tem_riserValue = formulario1.tem_riser.value,
+                    tem_ent_calValue = formulario1.tem_ent_cal.value;
+                    tem_ter_ent_calValue = formulario1.tem_ter_ent_cal.value;
+                    tem_cic_ivValue = formulario1.tem_cic_iv.value;
+                    tem_gas_cic_ivValue = formulario1.tem_gas_cic_iv.value;
+                    tem_cic_gemValue = formulario1.tem_cic_gem.value;
+                    ana_sal_torValue = formulario1.ana_sal_tor.value;
+                    vel_id_fanValue = formulario1.vel_id_fan.value;
+                    pres_sal_gas_idValue = formulario1.pres_sal_gas_id.value;
+                    dam_air_terValue = formulario1.dam_air_ter.value;
+
+                    localStorage.setItem('tem_riserValue', formulario1.tem_riser.value);
+                    localStorage.setItem('tem_ent_calValue', formulario1.tem_ent_cal.value);
+                    localStorage.setItem('tem_ter_ent_calValue', formulario1.tem_ter_ent_cal.value);
+                    localStorage.setItem('tem_cic_ivValue', formulario1.tem_cic_iv.value);
+                    localStorage.setItem('tem_gas_cic_ivValue', formulario1.tem_gas_cic_iv.value);
+                    localStorage.setItem('tem_cic_gemValue', formulario1.tem_cic_gem.value);
+                    localStorage.setItem('ana_sal_torValue', formulario1.ana_sal_tor.value);
+                    localStorage.setItem('vel_id_fanValue', formulario1.vel_id_fan.value);
+                    localStorage.setItem('pres_sal_gas_idValue', formulario1.pres_sal_gas_id.value);
+                    localStorage.setItem('dam_air_terValue', formulario1.dam_air_ter.value);
+ 
+                    document.getElementById('instance1').classList.remove('bg-blue-500');
+                    document.getElementById('instance1').classList.add('bg-blue-800');
+                }
+                registrado1 = !registrado1;
+            });
+        </script>
+    </template>
+
+    <!-- L2 -->
+    <template id="ins_horn" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Horno</h2>
+        </div>
+        <form class="formulario" id="formulario_horno">
+            <label for="entrada_horno">Entrada al Horno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="entrada_horno" name="entrada_horno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="grado_llenado_horno">Grado de Llenado del Horno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="grado_llenado_horno" name="grado_llenado_horno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="oxigeno">Oxígeno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="oxigeno" name="oxigeno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="co">CO</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="co" name="co" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_entrada_horno">Presión de Entrada al Horno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_entrada_horno" name="presion_entrada_horno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="alimentacion_horno">Alimentación al Horno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="alimentacion_horno" name="alimentacion_horno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="aire_secundario">Aire Secundario</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="aire_secundario" name="aire_secundario" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="zona_sinterizacion">Zona de Sinterización</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="zona_sinterizacion" name="zona_sinterizacion" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="error_balanzas_carbon">Porcentaje Error de las Balanzas de Carbono</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="error_balanzas_carbon" name="error_balanzas_carbon" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inyeccion_carbon">Inyección de Carbono</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inyeccion_carbon" name="inyeccion_carbon" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="potencia_motor_horno">Potencia Motor del Horno</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="potencia_motor_horno" name="potencia_motor_horno" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar2" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario2 = document.getElementById('formulario_horno');
+            botonGuardar2 = document.getElementById('botonGuardar2');
+            registrado2 = false;
+    
+            if (typeof entrada_hornoValue !== 'undefined') {document.getElementById('entrada_horno').value = entrada_hornoValue;}
+            if (typeof grado_llenado_hornoValue !== 'undefined') {document.getElementById('grado_llenado_horno').value = grado_llenado_hornoValue;}
+            if (typeof oxigenoValue !== 'undefined') {document.getElementById('oxigeno').value = oxigenoValue;}
+            if (typeof coValue !== 'undefined') {document.getElementById('co').value = coValue;}
+            if (typeof presion_entrada_hornoValue !== 'undefined') {document.getElementById('presion_entrada_horno').value = presion_entrada_hornoValue;}
+            if (typeof alimentacion_hornoValue !== 'undefined') {document.getElementById('alimentacion_horno').value = alimentacion_hornoValue;}
+            if (typeof aire_secundarioValue !== 'undefined') {document.getElementById('aire_secundario').value = aire_secundarioValue;}
+            if (typeof zona_sinterizacionValue !== 'undefined') {document.getElementById('zona_sinterizacion').value = zona_sinterizacionValue;}
+            if (typeof error_balanzas_carbonValue !== 'undefined') {document.getElementById('error_balanzas_carbon').value = error_balanzas_carbonValue;}
+            if (typeof inyeccion_carbonValue !== 'undefined') {document.getElementById('inyeccion_carbon').value = inyeccion_carbonValue;}
+            if (typeof potencia_motor_hornoValue !== 'undefined') {document.getElementById('potencia_motor_horno').value = potencia_motor_hornoValue;}
+            
+            if (localStorage.getItem('entrada_hornoValue')) {entrada_hornoValue = localStorage.getItem('entrada_hornoValue');document.getElementById('entrada_horno').value = entrada_hornoValue;}
+            if (localStorage.getItem('grado_llenado_hornoValue')) {grado_llenado_hornoValue = localStorage.getItem('grado_llenado_hornoValue');document.getElementById('grado_llenado_horno').value = grado_llenado_hornoValue;}
+            if (localStorage.getItem('oxigenoValue')) {oxigenoValue = localStorage.getItem('oxigenoValue');document.getElementById('oxigeno').value = oxigenoValue;}
+            if (localStorage.getItem('coValue')) {coValue = localStorage.getItem('coValue');document.getElementById('co').value = coValue;}
+            if (localStorage.getItem('presion_entrada_hornoValue')) {presion_entrada_hornoValue = localStorage.getItem('presion_entrada_hornoValue');document.getElementById('presion_entrada_horno').value = presion_entrada_hornoValue;}
+            if (localStorage.getItem('alimentacion_hornoValue')) {alimentacion_hornoValue = localStorage.getItem('alimentacion_hornoValue');document.getElementById('alimentacion_horno').value = alimentacion_hornoValue;}
+            if (localStorage.getItem('aire_secundarioValue')) {aire_secundarioValue = localStorage.getItem('aire_secundarioValue');document.getElementById('aire_secundario').value = aire_secundarioValue;}
+            if (localStorage.getItem('zona_sinterizacionValue')) {zona_sinterizacionValue = localStorage.getItem('zona_sinterizacionValue');document.getElementById('zona_sinterizacion').value = zona_sinterizacionValue;}
+            if (localStorage.getItem('error_balanzas_carbonValue')) {error_balanzas_carbonValue = localStorage.getItem('error_balanzas_carbonValue');document.getElementById('error_balanzas_carbon').value = error_balanzas_carbonValue;}
+            if (localStorage.getItem('inyeccion_carbonValue')) {inyeccion_carbonValue = localStorage.getItem('inyeccion_carbonValue');document.getElementById('inyeccion_carbon').value = inyeccion_carbonValue;}
+            if (localStorage.getItem('potencia_motor_hornoValue')) {potencia_motor_hornoValue = localStorage.getItem('potencia_motor_hornoValue');document.getElementById('potencia_motor_horno').value = potencia_motor_hornoValue;}
+
+            botonGuardar2.addEventListener('click', () => {
+                const inputs = formulario2.querySelectorAll('input');
+                
+                if (registrado2) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar2.style.backgroundColor = '';
+                    botonGuardar2.textContent = 'Guardar datos';
+                    botonGuardar2.addEventListener('mouseover', () => {botonGuardar2.style.backgroundColor = '';});
+                    botonGuardar2.addEventListener('mouseout', () => {botonGuardar2.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar2.style.backgroundColor = 'green';
+                    botonGuardar2.textContent = 'Datos guardados!';
+                    botonGuardar2.addEventListener('mouseover', () => {botonGuardar2.style.backgroundColor = '#006400';});
+                    botonGuardar2.addEventListener('mouseout', () => {botonGuardar2.style.backgroundColor = 'green';});
+                    
+                    entrada_hornoValue = formulario2.entrada_horno.value;
+                    grado_llenado_hornoValue = formulario2.grado_llenado_horno.value;
+                    oxigenoValue = formulario2.oxigeno.value;
+                    coValue = formulario2.co.value;
+                    presion_entrada_hornoValue = formulario2.presion_entrada_horno.value;
+                    alimentacion_hornoValue = formulario2.alimentacion_horno.value;
+                    aire_secundarioValue = formulario2.aire_secundario.value;
+                    zona_sinterizacionValue = formulario2.zona_sinterizacion.value;
+                    error_balanzas_carbonValue = formulario2.error_balanzas_carbon.value;
+                    inyeccion_carbonValue = formulario2.inyeccion_carbon.value;
+                    potencia_motor_hornoValue = formulario2.potencia_motor_horno.value;
+
+                    localStorage.setItem('entrada_hornoValue', formulario2.entrada_horno.value);
+                    localStorage.setItem('grado_llenado_hornoValue', formulario2.grado_llenado_horno.value);
+                    localStorage.setItem('oxigenoValue', formulario2.oxigeno.value);
+                    localStorage.setItem('coValue', formulario2.co.value);
+                    localStorage.setItem('presion_entrada_hornoValue', formulario2.presion_entrada_horno.value);
+                    localStorage.setItem('alimentacion_hornoValue', formulario2.alimentacion_horno.value);
+                    localStorage.setItem('aire_secundarioValue', formulario2.aire_secundario.value);
+                    localStorage.setItem('zona_sinterizacionValue', formulario2.zona_sinterizacion.value);
+                    localStorage.setItem('error_balanzas_carbonValue', formulario2.error_balanzas_carbon.value);
+                    localStorage.setItem('inyeccion_carbonValue', formulario2.inyeccion_carbon.value);
+                    localStorage.setItem('potencia_motor_hornoValue', formulario2.potencia_motor_horno.value);
+                }    
+                registrado2 = !registrado2;
+                document.getElementById('instance2').classList.remove('bg-blue-500');
+                document.getElementById('instance2').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L3 -->
+    <template id="ins_quem" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Quemador</h2>
+        </div>
+        <form class="formulario" id="formulario_quem">
+            <label for="regleta_swirl">Regleta Swirl</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="regleta_swirl" name="regleta_swirl" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="aire_primario">Aire Primario</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="aire_primario" name="aire_primario" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar3" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario3 = document.getElementById('formulario_quem');
+            botonGuardar3 = document.getElementById('botonGuardar3');
+            registrado3 = false;
+
+            if (typeof regleta_swirlValue !== 'undefined') {document.getElementById('regleta_swirl').value = regleta_swirlValue;}
+            if (typeof aire_primarioValue !== 'undefined') {document.getElementById('aire_primario').value = aire_primarioValue;}
+
+            if (localStorage.getItem('regleta_swirlValue')) {regleta_swirlValue = localStorage.getItem('regleta_swirlValue');document.getElementById('regleta_swirl').value = regleta_swirlValue;}
+            if (localStorage.getItem('aire_primarioValue')) {aire_primarioValue = localStorage.getItem('aire_primarioValue');document.getElementById('aire_primario').value = aire_primarioValue;}
+
+            botonGuardar3.addEventListener('click', () => {
+                const inputs = formulario3.querySelectorAll('input');
+                
+                if (registrado3) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar3.style.backgroundColor = '';
+                    botonGuardar3.textContent = 'Guardar datos';
+                    botonGuardar3.addEventListener('mouseover', () => {botonGuardar3.style.backgroundColor = '';});
+                    botonGuardar3.addEventListener('mouseout', () => {botonGuardar3.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar3.style.backgroundColor = 'green';
+                    botonGuardar3.textContent = 'Datos guardados!';
+                    botonGuardar3.addEventListener('mouseover', () => {botonGuardar3.style.backgroundColor = '#006400';});
+                    botonGuardar3.addEventListener('mouseout', () => {botonGuardar3.style.backgroundColor = 'green';});
+                    
+                    regleta_swirlValue = formulario3.regleta_swirl.value;
+                    aire_primarioValue = formulario3.aire_primario.value;
+
+                    localStorage.setItem('regleta_swirlValue', formulario3.regleta_swirl.value);
+                    localStorage.setItem('aire_primarioValue', formulario3.aire_primario.value);
+                }    
+                registrado3 = !registrado3;
+                document.getElementById('instance3').classList.remove('bg-blue-500');
+                document.getElementById('instance3').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L4 -->
+    <template id="ins_enfri" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Enfriador</h2>
+        </div>
+        <form class="formulario" id="formulario_enfriador">
+            <label for="presion_cabezal">Presión del Cabezal</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_cabezal" name="presion_cabezal" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_cama_enfriador">Presión Cama Enfriador</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_cama_enfriador" name="presion_cama_enfriador" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="temperatura_clinker">T° del Clinker</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="temperatura_clinker" name="temperatura_clinker" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="flujo_aire_clinker">Flujo de aire / Kg Clinker</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="flujo_aire_clinker" name="flujo_aire_clinker" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar4" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario4 = document.getElementById('formulario_enfriador');
+            botonGuardar4 = document.getElementById('botonGuardar4');
+            registrado4 = false;
+    
+            if (typeof presion_cabezalValue !== 'undefined') {document.getElementById('presion_cabezal').value = presion_cabezalValue;}
+            if (typeof presion_cama_enfriadorValue !== 'undefined') {document.getElementById('presion_cama_enfriador').value = presion_cama_enfriadorValue;}
+            if (typeof temperatura_clinkerValue !== 'undefined') {document.getElementById('temperatura_clinker').value = temperatura_clinkerValue;}
+            if (typeof flujo_aire_clinkerValue !== 'undefined') {document.getElementById('flujo_aire_clinker').value = flujo_aire_clinkerValue;}
+            
+            if (localStorage.getItem('presion_cabezalValue')) {presion_cabezalValue = localStorage.getItem('presion_cabezalValue'); document.getElementById('presion_cabezal').value = presion_cabezalValue;}
+            if (localStorage.getItem('presion_cama_enfriadorValue')) {presion_cama_enfriadorValue = localStorage.getItem('presion_cama_enfriadorValue'); document.getElementById('presion_cama_enfriador').value = presion_cama_enfriadorValue;}
+            if (localStorage.getItem('temperatura_clinkerValue')) {temperatura_clinkerValue = localStorage.getItem('temperatura_clinkerValue'); document.getElementById('temperatura_clinker').value = temperatura_clinkerValue;}
+            if (localStorage.getItem('flujo_aire_clinkerValue')) {flujo_aire_clinkerValue = localStorage.getItem('flujo_aire_clinkerValue'); document.getElementById('flujo_aire_clinker').value = flujo_aire_clinkerValue;}
+
+            botonGuardar4.addEventListener('click', () => {
+                const inputs = formulario4.querySelectorAll('input');
+                
+                if (registrado4) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar4.style.backgroundColor = '';
+                    botonGuardar4.textContent = 'Guardar datos';
+                    botonGuardar4.addEventListener('mouseover', () => {botonGuardar4.style.backgroundColor = '';});
+                    botonGuardar4.addEventListener('mouseout', () => {botonGuardar4.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar4.style.backgroundColor = 'green';
+                    botonGuardar4.textContent = 'Datos guardados!';
+                    botonGuardar4.addEventListener('mouseover', () => {botonGuardar4.style.backgroundColor = '#006400';});
+                    botonGuardar4.addEventListener('mouseout', () => {botonGuardar4.style.backgroundColor = 'green';});
+                    
+                    presion_cabezalValue = formulario4.presion_cabezal.value;
+                    presion_cama_enfriadorValue = formulario4.presion_cama_enfriador.value;
+                    temperatura_clinkerValue = formulario4.temperatura_clinker.value;
+                    flujo_aire_clinkerValue = formulario4.flujo_aire_clinker.value;
+
+                    localStorage.setItem('presion_cabezalValue', formulario4.presion_cabezal.value);
+                    localStorage.setItem('presion_cama_enfriadorValue', formulario4.presion_cama_enfriador.value);
+                    localStorage.setItem('temperatura_clinkerValue', formulario4.temperatura_clinker.value);
+                    localStorage.setItem('flujo_aire_clinkerValue', formulario4.flujo_aire_clinker.value);
+                }    
+                registrado4 = !registrado4;
+                document.getElementById('instance4').classList.remove('bg-blue-500');
+                document.getElementById('instance4').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L5 -->
+    <template id="ins_loesche_3" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Loesche 3 (Molino 3)</h2>
+        </div>
+        <form class="formulario" id="formulario_loesche_m3">
+            <label for="flujo_ventilador_m3">Flujo Ventilador (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="flujo_ventilador_m3" name="flujo_ventilador" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_hidraulica_m3">Presión Hidráulica (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_hidraulica_m3" name="presion_hidraulica" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_succion_m3">Presión de Succion (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_succion_m3" name="presion_succion" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_diferencial_molino_m3">Presión Diferencial de Molino (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_diferencial_molino_m3" name="presion_diferencial_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="temperatura_gases_salida_molino_m3">Temperatura Gases Salida Molino (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="temperatura_gases_salida_molino_m3" name="temperatura_gases_salida_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inyeccion_agua_molino_m3">Inyeccion de Agua a Molino (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inyeccion_agua_molino_m3" name="inyeccion_agua_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inyeccion_aditivo_m3">Inyeccion de Aditivo (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inyeccion_aditivo_m3" name="inyeccion_aditivo" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="velocidad_clasificador_m3">Velocidad de Clasificador (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="velocidad_clasificador_m3" name="velocidad_clasificador" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="alimentacion_molino_m3">Alimentacion a Molino (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="alimentacion_molino_m3" name="alimentacion_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="potencia_motor_principal_m3">Potencia Motor Principal (M3)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="potencia_motor_principal_m3" name="potencia_motor_principal" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar_m3" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario_m3 = document.getElementById('formulario_loesche_m3');
+            botonGuardar_m3 = document.getElementById('botonGuardar_m3');
+            registrado_m3 = false;
+    
+            if (typeof flujo_ventilador_m3Value !== 'undefined') {document.getElementById('flujo_ventilador_m3').value = flujo_ventilador_m3Value;}
+            if (typeof presion_hidraulica_m3Value !== 'undefined') {document.getElementById('presion_hidraulica_m3').value = presion_hidraulica_m3Value;}
+            if (typeof presion_succion_m3Value !== 'undefined') {document.getElementById('presion_succion_m3').value = presion_succion_m3Value;}
+            if (typeof presion_diferencial_molino_m3Value !== 'undefined') {document.getElementById('presion_diferencial_molino_m3').value = presion_diferencial_molino_m3Value;}
+            if (typeof temperatura_gases_salida_molino_m3Value !== 'undefined') {document.getElementById('temperatura_gases_salida_molino_m3').value = temperatura_gases_salida_molino_m3Value;}
+            if (typeof inyeccion_agua_molino_m3Value !== 'undefined') {document.getElementById('inyeccion_agua_molino_m3').value = inyeccion_agua_molino_m3Value;}
+            if (typeof inyeccion_aditivo_m3Value !== 'undefined') {document.getElementById('inyeccion_aditivo_m3').value = inyeccion_aditivo_m3Value;}
+            if (typeof velocidad_clasificador_m3Value !== 'undefined') {document.getElementById('velocidad_clasificador_m3').value = velocidad_clasificador_m3Value;}
+            if (typeof alimentacion_molino_m3Value !== 'undefined') {document.getElementById('alimentacion_molino_m3').value = alimentacion_molino_m3Value;}
+            if (typeof potencia_motor_principal_m3Value !== 'undefined') {document.getElementById('potencia_motor_principal_m3').value = potencia_motor_principal_m3Value;}
+    
+            if (localStorage.getItem('flujo_ventilador_m3Value')) {flujo_ventilador_m3Value = localStorage.getItem('flujo_ventilador_m3Value'); document.getElementById('flujo_ventilador_m3').value = flujo_ventilador_m3Value;}
+            if (localStorage.getItem('presion_hidraulica_m3Value')) {presion_hidraulica_m3Value = localStorage.getItem('presion_hidraulica_m3Value'); document.getElementById('presion_hidraulica_m3').value = presion_hidraulica_m3Value;}
+            if (localStorage.getItem('presion_succion_m3Value')) {presion_succion_m3Value = localStorage.getItem('presion_succion_m3Value'); document.getElementById('presion_succion_m3').value = presion_succion_m3Value;}
+            if (localStorage.getItem('presion_diferencial_molino_m3Value')) {presion_diferencial_molino_m3Value = localStorage.getItem('presion_diferencial_molino_m3Value'); document.getElementById('presion_diferencial_molino_m3').value = presion_diferencial_molino_m3Value;}
+            if (localStorage.getItem('temperatura_gases_salida_molino_m3Value')) {temperatura_gases_salida_molino_m3Value = localStorage.getItem('temperatura_gases_salida_molino_m3Value'); document.getElementById('temperatura_gases_salida_molino_m3').value = temperatura_gases_salida_molino_m3Value;}
+            if (localStorage.getItem('inyeccion_agua_molino_m3Value')) {inyeccion_agua_molino_m3Value = localStorage.getItem('inyeccion_agua_molino_m3Value'); document.getElementById('inyeccion_agua_molino_m3').value = inyeccion_agua_molino_m3Value;}
+            if (localStorage.getItem('inyeccion_aditivo_m3Value')) {inyeccion_aditivo_m3Value = localStorage.getItem('inyeccion_aditivo_m3Value'); document.getElementById('inyeccion_aditivo_m3').value = inyeccion_aditivo_m3Value;}
+            if (localStorage.getItem('velocidad_clasificador_m3Value')) {velocidad_clasificador_m3Value = localStorage.getItem('velocidad_clasificador_m3Value'); document.getElementById('velocidad_clasificador_m3').value = velocidad_clasificador_m3Value;}
+            if (localStorage.getItem('alimentacion_molino_m3Value')) {alimentacion_molino_m3Value = localStorage.getItem('alimentacion_molino_m3Value'); document.getElementById('alimentacion_molino_m3').value = alimentacion_molino_m3Value;}
+            if (localStorage.getItem('potencia_motor_principal_m3Value')) {potencia_motor_principal_m3Value = localStorage.getItem('potencia_motor_principal_m3Value'); document.getElementById('potencia_motor_principal_m3').value = potencia_motor_principal_m3Value;}
+            
+            botonGuardar_m3.addEventListener('click', () => {
+                const inputs = formulario_m3.querySelectorAll('input');
+    
+                if (registrado_m3) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar_m3.style.backgroundColor = '';
+                    botonGuardar_m3.textContent = 'Guardar datos';
+                    botonGuardar_m3.addEventListener('mouseover', () => {botonGuardar_m3.style.backgroundColor = '';});
+                    botonGuardar_m3.addEventListener('mouseout', () => {botonGuardar_m3.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar_m3.style.backgroundColor = 'green';
+                    botonGuardar_m3.textContent = 'Datos guardados!';
+                    botonGuardar_m3.addEventListener('mouseover', () => {botonGuardar_m3.style.backgroundColor = '#006400';});
+                    botonGuardar_m3.addEventListener('mouseout', () => {botonGuardar_m3.style.backgroundColor = 'green';});
+    
+                    flujo_ventilador_m3Value = formulario_m3.flujo_ventilador_m3.value;
+                    presion_hidraulica_m3Value = formulario_m3.presion_hidraulica_m3.value;
+                    presion_succion_m3Value = formulario_m3.presion_succion_m3.value;
+                    presion_diferencial_molino_m3Value = formulario_m3.presion_diferencial_molino_m3.value;
+                    temperatura_gases_salida_molino_m3Value = formulario_m3.temperatura_gases_salida_molino_m3.value;
+                    inyeccion_agua_molino_m3Value = formulario_m3.inyeccion_agua_molino_m3.value;
+                    inyeccion_aditivo_m3Value = formulario_m3.inyeccion_aditivo_m3.value;
+                    velocidad_clasificador_m3Value = formulario_m3.velocidad_clasificador_m3.value;
+                    alimentacion_molino_m3Value = formulario_m3.alimentacion_molino_m3.value;
+                    potencia_motor_principal_m3Value = formulario_m3.potencia_motor_principal_m3.value;
+
+                    localStorage.setItem('flujo_ventilador_m3Value', formulario_m3.flujo_ventilador_m3.value);
+                    localStorage.setItem('presion_hidraulica_m3Value', formulario_m3.presion_hidraulica_m3.value);
+                    localStorage.setItem('presion_succion_m3Value', formulario_m3.presion_succion_m3.value);
+                    localStorage.setItem('presion_diferencial_molino_m3Value', formulario_m3.presion_diferencial_molino_m3.value);
+                    localStorage.setItem('temperatura_gases_salida_molino_m3Value', formulario_m3.temperatura_gases_salida_molino_m3.value);
+                    localStorage.setItem('inyeccion_agua_molino_m3Value', formulario_m3.inyeccion_agua_molino_m3.value);
+                    localStorage.setItem('inyeccion_aditivo_m3Value', formulario_m3.inyeccion_aditivo_m3.value);
+                    localStorage.setItem('velocidad_clasificador_m3Value', formulario_m3.velocidad_clasificador_m3.value);
+                    localStorage.setItem('alimentacion_molino_m3Value', formulario_m3.alimentacion_molino_m3.value);
+                    localStorage.setItem('potencia_motor_principal_m3Value', formulario_m3.potencia_motor_principal_m3.value);
+                }
+                registrado_m3 = !registrado_m3;
+                document.getElementById('instance5').classList.remove('bg-blue-500');
+                document.getElementById('instance5').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L6 -->
+    <template id="ins_loesche_7" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Loesche 7 (Molino 7)</h2>
+        </div>
+        <form class="formulario" id="formulario_loesche_7">
+            <label for="flujo_ventilador_m7">Flujo Ventilador (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="flujo_ventilador_m7" name="flujo_ventilador_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_hidraulica_m7">Presión Hidráulica (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_hidraulica_m7" name="presion_hidraulica_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_succion_m7">Presión de Succion (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_succion_m7" name="presion_succion_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presion_diferencial_molino_m7">Presión Diferencial de Molino (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presion_diferencial_molino_m7" name="presion_diferencial_molino_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="temperatura_gases_salida_molino_m7">Temperatura Gases Salida Molino (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="temperatura_gases_salida_molino_m7" name="temperatura_gases_salida_molino_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inyeccion_agua_molino_m7">Inyección de Agua a Molino (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inyeccion_agua_molino_m7" name="inyeccion_agua_molino_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inyeccion_aditivo_m7">Inyección de Aditivo (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inyeccion_aditivo_m7" name="inyeccion_aditivo_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="velocidad_clasificador_m7">Velocidad de Clasificador (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="velocidad_clasificador_m7" name="velocidad_clasificador_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="alimentacion_molino_m7">Alimentación a Molino (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="alimentacion_molino_m7" name="alimentacion_molino_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="potencia_motor_principal_m7">Potencia Motor Principal (M7)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="potencia_motor_principal_m7" name="potencia_motor_principal_m7" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar6" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario6 = document.getElementById('formulario_loesche_7');
+            botonGuardar6 = document.getElementById('botonGuardar6');
+            registrado6 = false;
+    
+            if (typeof flujo_ventilador_m7Value !== 'undefined') {document.getElementById('flujo_ventilador_m7').value = flujo_ventilador_m7Value;}
+            if (typeof presion_hidraulica_m7Value !== 'undefined') {document.getElementById('presion_hidraulica_m7').value = presion_hidraulica_m7Value;}
+            if (typeof presion_succion_m7Value !== 'undefined') {document.getElementById('presion_succion_m7').value = presion_succion_m7Value;}
+            if (typeof presion_diferencial_molino_m7Value !== 'undefined') {document.getElementById('presion_diferencial_molino_m7').value = presion_diferencial_molino_m7Value;}
+            if (typeof temperatura_gases_salida_molino_m7Value !== 'undefined') {document.getElementById('temperatura_gases_salida_molino_m7').value = temperatura_gases_salida_molino_m7Value;}
+            if (typeof inyeccion_agua_molino_m7Value !== 'undefined') {document.getElementById('inyeccion_agua_molino_m7').value = inyeccion_agua_molino_m7Value;}
+            if (typeof inyeccion_aditivo_m7Value !== 'undefined') {document.getElementById('inyeccion_aditivo_m7').value = inyeccion_aditivo_m7Value;}
+            if (typeof velocidad_clasificador_m7Value !== 'undefined') {document.getElementById('velocidad_clasificador_m7').value = velocidad_clasificador_m7Value;}
+            if (typeof alimentacion_molino_m7Value !== 'undefined') {document.getElementById('alimentacion_molino_m7').value = alimentacion_molino_m7Value;}
+            if (typeof potencia_motor_principal_m7Value !== 'undefined') {document.getElementById('potencia_motor_principal_m7').value = potencia_motor_principal_m7Value;}
+            
+            if (localStorage.getItem('flujo_ventilador_m7Value')) {flujo_ventilador_m7Value = localStorage.getItem('flujo_ventilador_m7Value'); document.getElementById('flujo_ventilador_m7').value = flujo_ventilador_m7Value;}
+            if (localStorage.getItem('presion_hidraulica_m7Value')) {presion_hidraulica_m7Value = localStorage.getItem('presion_hidraulica_m7Value'); document.getElementById('presion_hidraulica_m7').value = presion_hidraulica_m7Value;}
+            if (localStorage.getItem('presion_succion_m7Value')) {presion_succion_m7Value = localStorage.getItem('presion_succion_m7Value'); document.getElementById('presion_succion_m7').value = presion_succion_m7Value;}
+            if (localStorage.getItem('presion_diferencial_molino_m7Value')) {presion_diferencial_molino_m7Value = localStorage.getItem('presion_diferencial_molino_m7Value'); document.getElementById('presion_diferencial_molino_m7').value = presion_diferencial_molino_m7Value;}
+            if (localStorage.getItem('temperatura_gases_salida_molino_m7Value')) {temperatura_gases_salida_molino_m7Value = localStorage.getItem('temperatura_gases_salida_molino_m7Value'); document.getElementById('temperatura_gases_salida_molino_m7').value = temperatura_gases_salida_molino_m7Value;}
+            if (localStorage.getItem('inyeccion_agua_molino_m7Value')) {inyeccion_agua_molino_m7Value = localStorage.getItem('inyeccion_agua_molino_m7Value'); document.getElementById('inyeccion_agua_molino_m7').value = inyeccion_agua_molino_m7Value;}
+            if (localStorage.getItem('inyeccion_aditivo_m7Value')) {inyeccion_aditivo_m7Value = localStorage.getItem('inyeccion_aditivo_m7Value'); document.getElementById('inyeccion_aditivo_m7').value = inyeccion_aditivo_m7Value;}
+            if (localStorage.getItem('velocidad_clasificador_m7Value')) {velocidad_clasificador_m7Value = localStorage.getItem('velocidad_clasificador_m7Value'); document.getElementById('velocidad_clasificador_m7').value = velocidad_clasificador_m7Value;}
+            if (localStorage.getItem('alimentacion_molino_m7Value')) {alimentacion_molino_m7Value = localStorage.getItem('alimentacion_molino_m7Value'); document.getElementById('alimentacion_molino_m7').value = alimentacion_molino_m7Value;}
+            if (localStorage.getItem('potencia_motor_principal_m7Value')) {potencia_motor_principal_m7Value = localStorage.getItem('potencia_motor_principal_m7Value'); document.getElementById('potencia_motor_principal_m7').value = potencia_motor_principal_m7Value;}
+
+            botonGuardar6.addEventListener('click', () => {
+                const inputs = formulario6.querySelectorAll('input');
+                
+                if (registrado6) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar6.style.backgroundColor = '';
+                    botonGuardar6.textContent = 'Guardar datos';
+                    botonGuardar6.addEventListener('mouseover', () => {botonGuardar6.style.backgroundColor = '';});
+                    botonGuardar6.addEventListener('mouseout', () => {botonGuardar6.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar6.style.backgroundColor = 'green';
+                    botonGuardar6.textContent = 'Datos guardados!';
+                    botonGuardar6.addEventListener('mouseover', () => {botonGuardar6.style.backgroundColor = '#006400';});
+                    botonGuardar6.addEventListener('mouseout', () => {botonGuardar6.style.backgroundColor = 'green';});
+                    
+                    flujo_ventilador_m7Value = formulario6.flujo_ventilador_m7.value;
+                    presion_hidraulica_m7Value = formulario6.presion_hidraulica_m7.value;
+                    presion_succion_m7Value = formulario6.presion_succion_m7.value;
+                    presion_diferencial_molino_m7Value = formulario6.presion_diferencial_molino_m7.value;
+                    temperatura_gases_salida_molino_m7Value = formulario6.temperatura_gases_salida_molino_m7.value;
+                    inyeccion_agua_molino_m7Value = formulario6.inyeccion_agua_molino_m7.value;
+                    inyeccion_aditivo_m7Value = formulario6.inyeccion_aditivo_m7.value;
+                    velocidad_clasificador_m7Value = formulario6.velocidad_clasificador_m7.value;
+                    alimentacion_molino_m7Value = formulario6.alimentacion_molino_m7.value;
+                    potencia_motor_principal_m7Value = formulario6.potencia_motor_principal_m7.value;
+
+                    localStorage.setItem('flujo_ventilador_m7Value', formulario6.flujo_ventilador_m7.value);
+                    localStorage.setItem('presion_hidraulica_m7Value', formulario6.presion_hidraulica_m7.value);
+                    localStorage.setItem('presion_succion_m7Value', formulario6.presion_succion_m7.value);
+                    localStorage.setItem('presion_diferencial_molino_m7Value', formulario6.presion_diferencial_molino_m7.value);
+                    localStorage.setItem('temperatura_gases_salida_molino_m7Value', formulario6.temperatura_gases_salida_molino_m7.value);
+                    localStorage.setItem('inyeccion_agua_molino_m7Value', formulario6.inyeccion_agua_molino_m7.value);
+                    localStorage.setItem('inyeccion_aditivo_m7Value', formulario6.inyeccion_aditivo_m7.value);
+                    localStorage.setItem('velocidad_clasificador_m7Value', formulario6.velocidad_clasificador_m7.value);
+                    localStorage.setItem('alimentacion_molino_m7Value', formulario6.alimentacion_molino_m7.value);
+                    localStorage.setItem('potencia_motor_principal_m7Value', formulario6.potencia_motor_principal_m7.value);
+                }    
+                registrado6 = !registrado6;
+                document.getElementById('instance6').classList.remove('bg-blue-500');
+                document.getElementById('instance6').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L7 -->  
+    <template id="ins_gen_mol" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección general en Molino</h2>
+        </div>
+        <form class="formulario" id="formulario_gen_mol"> 
+            <div class="flex justify-between items-center">
+                <label for="altura_toberas_mesa"  class="pr-1">Altura de las Toberas de Agua con respecto a la mesa</label>
+                <button type="button" id="toberasShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="altura_toberas_mesa" name="altura_toberas_mesa" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="flex justify-between items-center">
+                <label for="incl_placas_armor_ring" class="pr-1">Inclinación de Placas del Armor Ring</label>
+                <button type="button" id="placasArmorRingShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="incl_placas_armor_ring" name="incl_placas_armor_ring" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="flex justify-between items-center">
+                <label for="incl_placas_lourve_ring" class="pr-1">Inclinación de Placas del Lourve Ring</label>
+                <button type="button" id="placasLouvreRingShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="incl_placas_lourve_ring" name="incl_placas_lourve_ring" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="flex justify-between items-center">
+                <label for="verificar_tapas_rodillos" class="pr-1">Verificar Tapas debajo de los 4 rodillos</label>
+                <button type="button" id="tapasRodillosShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="verificar_tapas_rodillos" name="verificar_tapas_rodillos" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="flex justify-between items-center">
+                <label for="verificar_presion_acumuladores" class="pr-1">Verificar Presión de los Acumuladores</label>
+                <button type="button" id="acumuladoresShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>            
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="verificar_presion_acumuladores" name="verificar_presion_acumuladores" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="flex justify-between items-center">
+                <label for="altura_dam_ring" class="pr-1">Altura de Dam Ring</label>
+                <button type="button" id="alturaDamRingShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div> 
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="altura_dam_ring" name="altura_dam_ring" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar7" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            toberasShowImageButton = document.getElementById('toberasShowImageButton');
+            toberasModal = document.getElementById('toberasModal');
+            toberasImage = document.getElementById('toberasImage');
+            toberasCloseImageModal = document.getElementById('toberasCloseImageModal');
+            placasArmorRingShowImageButton = document.getElementById('placasArmorRingShowImageButton');
+            placasArmorRingModal = document.getElementById('placasArmorRingModal');
+            placasArmorRingImage = document.getElementById('placasArmorRingImage');
+            placasArmorRingCloseImageModal = document.getElementById('placasArmorRingCloseImageModal');
+            placasLouvreRingShowImageButton = document.getElementById('placasLouvreRingShowImageButton');
+            placasLouvreRingModal = document.getElementById('placasLouvreRingModal');
+            placasLouvreRingImage = document.getElementById('placasLouvreRingImage');
+            placasLouvreRingCloseImageModal = document.getElementById('placasLouvreRingCloseImageModal');
+            tapasRodillosShowImageButton = document.getElementById('tapasRodillosShowImageButton');
+            tapasRodillosModal = document.getElementById('tapasRodillosModal');
+            tapasRodillosImage = document.getElementById('tapasRodillosImage');
+            tapasRodillosCloseImageModal = document.getElementById('tapasRodillosCloseImageModal');
+            acumuladoresShowImageButton = document.getElementById('acumuladoresShowImageButton');
+            acumuladoresModal = document.getElementById('acumuladoresModal');
+            acumuladoresImage = document.getElementById('acumuladoresImage');
+            acumuladoresCloseImageModal = document.getElementById('acumuladoresCloseImageModal');
+            alturaDamRingShowImageButton = document.getElementById('alturaDamRingShowImageButton');
+            alturaDamRingModal = document.getElementById('alturaDamRingModal');
+            alturaDamRingImage = document.getElementById('alturaDamRingImage');
+            alturaDamRingCloseImageModal = document.getElementById('alturaDamRingCloseImageModal');
+
+            toberasShowImageButton.addEventListener('click', function() {toberasImage.src = 'toberas.jpg'; toberasModal.classList.remove('hidden');});
+            toberasModal.addEventListener('click', function(event) {if (event.target === toberasModal) {toberasModal.classList.add('hidden');}});
+            placasArmorRingShowImageButton.addEventListener('click', function() {placasArmorRingImage.src = 'placasArmorRing.jpg'; placasArmorRingModal.classList.remove('hidden');});
+            placasArmorRingModal.addEventListener('click', function(event) {if (event.target === placasArmorRingModal) {placasArmorRingModal.classList.add('hidden');}});
+            placasLouvreRingShowImageButton.addEventListener('click', function() {placasLouvreRingImage.src = 'placasLouvreRing.jpg'; placasLouvreRingModal.classList.remove('hidden');});
+            placasLouvreRingModal.addEventListener('click', function(event) {if (event.target === placasLouvreRingModal) {placasLouvreRingModal.classList.add('hidden');}});
+            tapasRodillosShowImageButton.addEventListener('click', function() {tapasRodillosImage.src = 'tapasRodillos.jpg'; tapasRodillosModal.classList.remove('hidden');});
+            tapasRodillosModal.addEventListener('click', function(event) {if (event.target === tapasRodillosModal) {tapasRodillosModal.classList.add('hidden');}});
+            acumuladoresShowImageButton.addEventListener('click', function() {acumuladoresImage.src = 'acumuladores.jpg'; acumuladoresModal.classList.remove('hidden');});
+            acumuladoresModal.addEventListener('click', function(event) {if (event.target === acumuladoresModal) {acumuladoresModal.classList.add('hidden');}});
+            alturaDamRingShowImageButton.addEventListener('click', function() {alturaDamRingImage.src = 'placasLouvreRing.jpg'; alturaDamRingModal.classList.remove('hidden');});
+            alturaDamRingModal.addEventListener('click', function(event) {if (event.target === alturaDamRingModal) {alturaDamRingModal.classList.add('hidden');}});
+
+            formulario7 = document.getElementById('formulario_gen_mol');
+            botonGuardar7 = document.getElementById('botonGuardar7');
+            registrado7 = false;
+    
+            if (typeof altura_toberas_mesaValue !== 'undefined') {document.getElementById('altura_toberas_mesa').value = altura_toberas_mesaValue;}
+            if (typeof incl_placas_armor_ringValue !== 'undefined') {document.getElementById('incl_placas_armor_ring').value = incl_placas_armor_ringValue;}
+            if (typeof incl_placas_lourve_ringValue !== 'undefined') {document.getElementById('incl_placas_lourve_ring').value = incl_placas_lourve_ringValue;}
+            if (typeof verificar_tapas_rodillosValue !== 'undefined') {document.getElementById('verificar_tapas_rodillos').value = verificar_tapas_rodillosValue;}
+            if (typeof verificar_presion_acumuladoresValue !== 'undefined') {document.getElementById('verificar_presion_acumuladores').value = verificar_presion_acumuladoresValue;}
+            if (typeof altura_dam_ringValue !== 'undefined') {document.getElementById('altura_dam_ring').value = altura_dam_ringValue;}
+
+            if (localStorage.getItem('altura_toberas_mesaValue')) {altura_toberas_mesaValue = localStorage.getItem('altura_toberas_mesaValue');document.getElementById('altura_toberas_mesa').value = altura_toberas_mesaValue;}
+            if (localStorage.getItem('incl_placas_armor_ringValue')) {incl_placas_armor_ringValue = localStorage.getItem('incl_placas_armor_ringValue');document.getElementById('incl_placas_armor_ring').value = incl_placas_armor_ringValue;}
+            if (localStorage.getItem('incl_placas_lourve_ringValue')) {incl_placas_lourve_ringValue = localStorage.getItem('incl_placas_lourve_ringValue');document.getElementById('incl_placas_lourve_ring').value = incl_placas_lourve_ringValue;}
+            if (localStorage.getItem('verificar_tapas_rodillosValue')) {verificar_tapas_rodillosValue = localStorage.getItem('verificar_tapas_rodillosValue');document.getElementById('verificar_tapas_rodillos').value = verificar_tapas_rodillosValue;}
+            if (localStorage.getItem('verificar_presion_acumuladoresValue')) {verificar_presion_acumuladoresValue = localStorage.getItem('verificar_presion_acumuladoresValue');document.getElementById('verificar_presion_acumuladores').value = verificar_presion_acumuladoresValue;}
+            if (localStorage.getItem('altura_dam_ringValue')) {altura_dam_ringValue = localStorage.getItem('altura_dam_ringValue');document.getElementById('altura_dam_ring').value = altura_dam_ringValue;}
+
+            botonGuardar7.addEventListener('click', () => {
+                const inputs = formulario7.querySelectorAll('input');
+                
+                if (registrado7) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar7.style.backgroundColor = '';
+                    botonGuardar7.textContent = 'Guardar datos';
+                    botonGuardar7.addEventListener('mouseover', () => {botonGuardar7.style.backgroundColor = '';});
+                    botonGuardar7.addEventListener('mouseout', () => {botonGuardar7.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar7.style.backgroundColor = 'green';
+                    botonGuardar7.textContent = 'Datos guardados!';
+                    botonGuardar7.addEventListener('mouseover', () => {botonGuardar7.style.backgroundColor = '#006400';});
+                    botonGuardar7.addEventListener('mouseout', () => {botonGuardar7.style.backgroundColor = 'green';});
+                    
+                    altura_toberas_mesaValue = formulario7.altura_toberas_mesa.value;
+                    incl_placas_armor_ringValue = formulario7.incl_placas_armor_ring.value;
+                    incl_placas_lourve_ringValue = formulario7.incl_placas_lourve_ring.value;
+                    verificar_tapas_rodillosValue = formulario7.verificar_tapas_rodillos.value;
+                    verificar_presion_acumuladoresValue = formulario7.verificar_presion_acumuladores.value;
+                    altura_dam_ringValue = formulario7.altura_dam_ring.value;
+
+                    localStorage.setItem('altura_toberas_mesaValue', formulario7.altura_toberas_mesa.value);
+                    localStorage.setItem('incl_placas_armor_ringValue', formulario7.incl_placas_armor_ring.value);
+                    localStorage.setItem('incl_placas_lourve_ringValue', formulario7.incl_placas_lourve_ring.value);
+                    localStorage.setItem('verificar_tapas_rodillosValue', formulario7.verificar_tapas_rodillos.value);
+                    localStorage.setItem('verificar_presion_acumuladoresValue', formulario7.verificar_presion_acumuladores.value);
+                    localStorage.setItem('altura_dam_ringValue', formulario7.altura_dam_ring.value);
+                }    
+                registrado7 = !registrado7;
+                document.getElementById('instance7').classList.remove('bg-blue-500');
+                document.getElementById('instance7').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- Toberas img -->
+    <div id="toberasModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="toberasContainer" class="p-4 rounded shadow-lg">
+            <button id="toberasCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="toberasImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+
+    <!-- Placas Armor Ring img -->
+    <div id="placasArmorRingModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="placasArmorRingContainer" class="p-4 rounded shadow-lg">
+            <button id="placasArmorRingCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="placasArmorRingImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+
+    <!-- Placas Louvre Ring img -->
+    <div id="placasLouvreRingModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="placasLouvreRingContainer" class="p-4 rounded shadow-lg">
+            <button id="placasLouvreRingCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="placasLouvreRingImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+
+    <!-- Tapas Rodillos img -->
+    <div id="tapasRodillosModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="tapasRodillosContainer" class="p-4 rounded shadow-lg">
+            <button id="tapasRodillosCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="tapasRodillosImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+
+    <!-- Acumuladores img -->
+    <div id="acumuladoresModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="acumuladoresContainer" class="p-4 rounded shadow-lg">
+            <button id="acumuladoresCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="acumuladoresImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+
+    <!-- Altura Dam Ring img -->
+    <div id="alturaDamRingModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="alturaDamRingContainer" class="p-4 rounded shadow-lg">
+            <button id="alturaDamRingCloseImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="alturaDamRingImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+    
+    <!-- L8 -->
+    <template id="ins_gen_clas" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección general de clasificador</h2>
+        </div>
+        <form class="formulario" id="formulario_gen_clas">
+            <div class="flex justify-between items-center">
+                <label for="revisar_sello" class="pr-1">Revisar el Sello de Alta Eficiencia</label>
+                <button type="button" id="selloShowImageButton" class="btn-imagen ml-auto bg-blue-500 hover:bg-blue-700 ml-[10px] text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline">Mostrar foto</button>
+            </div>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="revisar_sello" name="revisar_sello" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="verificar_distancia_alabes">Revisar y Verificar distancia de los Alabes</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="verificar_distancia_alabes" name="verificar_distancia_alabes" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar8" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            selloShowImageButton = document.getElementById('selloShowImageButton');
+            selloModal = document.getElementById('selloModal');
+            selloImage = document.getElementById('selloImage');
+            selloCloseImageModal = document.getElementById('selloCloseImageModal');
+            
+            selloShowImageButton.addEventListener('click', function() {selloImage.src = 'sello.jpg'; selloModal.classList.remove('hidden');});
+            selloModal.addEventListener('click', function(event) {if (event.target === selloModal) {selloModal.classList.add('hidden');}});
+            
+            formulario8 = document.getElementById('formulario_gen_clas');
+            botonGuardar8 = document.getElementById('botonGuardar8');
+            registrado8 = false;
+    
+            if (typeof revisar_selloValue !== 'undefined') {document.getElementById('revisar_sello').value = revisar_selloValue;}
+            if (typeof verificar_distancia_alabesValue !== 'undefined') {document.getElementById('verificar_distancia_alabes').value = verificar_distancia_alabesValue;}
+    
+            if (localStorage.getItem('revisar_selloValue')) {revisar_selloValue = localStorage.getItem('revisar_selloValue'); document.getElementById('revisar_sello').value = revisar_selloValue;}
+            if (localStorage.getItem('verificar_distancia_alabesValue')) {verificar_distancia_alabesValue = localStorage.getItem('verificar_distancia_alabesValue'); document.getElementById('verificar_distancia_alabes').value = verificar_distancia_alabesValue;}
+
+            botonGuardar8.addEventListener('click', () => {
+                const inputs = formulario8.querySelectorAll('input');
+    
+                if (registrado8) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar8.style.backgroundColor = '';
+                    botonGuardar8.textContent = 'Guardar datos';
+                    botonGuardar8.addEventListener('mouseover', () => {botonGuardar8.style.backgroundColor = '';});
+                    botonGuardar8.addEventListener('mouseout', () => {botonGuardar8.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar8.style.backgroundColor = 'green';
+                    botonGuardar8.textContent = 'Datos guardados!';
+                    botonGuardar8.addEventListener('mouseover', () => {botonGuardar8.style.backgroundColor = '#006400';});
+                    botonGuardar8.addEventListener('mouseout', () => {botonGuardar8.style.backgroundColor = 'green';});
+    
+                    revisar_selloValue = formulario8.revisar_sello.value;
+                    verificar_distancia_alabesValue = formulario8.verificar_distancia_alabes.value;
+
+                    localStorage.setItem('revisar_selloValue', formulario8.revisar_sello.value);
+                    localStorage.setItem('verificar_distancia_alabesValue', formulario8.verificar_distancia_alabes.value);
+                }    
+                registrado8 = !registrado8;
+                document.getElementById('instance8').classList.remove('bg-blue-500');
+                document.getElementById('instance8').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- Altura Dam Ring img -->
+    <div id="selloModal" class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="selloContainer" class="p-4 rounded shadow-lg">
+            <button id="selloImageModal" class="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800">&times;</button>
+            <img id="selloImage" src="" alt="Imagen" class="w-full">
+        </div>
+    </div>
+    
+    <!-- L9 -->  
+    <template id="ins_cam_sec" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Cámara de Secado</h2>
+        </div>
+        <form class="formulario" id="formulario_cam_sec">
+            <label for="exceso_material">¿Exceso de material?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="exceso_material" name="exceso_material" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="presencia_bola">¿Presencia de bola o chatarra?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="presencia_bola" name="presencia_bola" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="estado_levantadores">¿Es bueno el estado de los levantadores?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="estado_levantadores" name="estado_levantadores" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="estado_helice">¿Es bueno el estado de la hélice?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="estado_helice" name="estado_helice" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar9" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario9 = document.getElementById('formulario_cam_sec');
+            botonGuardar9 = document.getElementById('botonGuardar9');
+            registrado9 = false;
+    
+            if (typeof exceso_materialValue !== 'undefined') {document.getElementById('exceso_material').value = exceso_materialValue;}
+            if (typeof presencia_bolaValue !== 'undefined') {document.getElementById('presencia_bola').value = presencia_bolaValue;}
+            if (typeof estado_levantadoresValue !== 'undefined') {document.getElementById('estado_levantadores').value = estado_levantadoresValue;}
+            if (typeof estado_heliceValue !== 'undefined') {document.getElementById('estado_helice').value = estado_heliceValue;}
+
+            if (localStorage.getItem('exceso_materialValue')) {exceso_materialValue = localStorage.getItem('exceso_materialValue'); document.getElementById('exceso_material').value = exceso_materialValue;}
+            if (localStorage.getItem('presencia_bolaValue')) {presencia_bolaValue = localStorage.getItem('presencia_bolaValue'); document.getElementById('presencia_bola').value = presencia_bolaValue;}
+            if (localStorage.getItem('estado_levantadoresValue')) {estado_levantadoresValue = localStorage.getItem('estado_levantadoresValue'); document.getElementById('estado_levantadores').value = estado_levantadoresValue;}
+            if (localStorage.getItem('estado_heliceValue')) {estado_heliceValue = localStorage.getItem('estado_heliceValue'); document.getElementById('estado_helice').value = estado_heliceValue;}
+
+            botonGuardar9.addEventListener('click', () => {
+                const inputs = formulario9.querySelectorAll('input');
+    
+                if (registrado9) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar9.style.backgroundColor = '';
+                    botonGuardar9.textContent = 'Guardar datos';
+                    botonGuardar9.addEventListener('mouseover', () => {botonGuardar9.style.backgroundColor = '';});
+                    botonGuardar9.addEventListener('mouseout', () => {botonGuardar9.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar9.style.backgroundColor = 'green';
+                    botonGuardar9.textContent = 'Datos guardados!';
+                    botonGuardar9.addEventListener('mouseover', () => {botonGuardar9.style.backgroundColor = '#006400';});
+                    botonGuardar9.addEventListener('mouseout', () => {botonGuardar9.style.backgroundColor = 'green';});
+    
+                    exceso_materialValue = formulario9.exceso_material.value;
+                    presencia_bolaValue = formulario9.presencia_bola.value;
+                    estado_levantadoresValue = formulario9.estado_levantadores.value;
+                    estado_heliceValue = formulario9.estado_helice.value;
+
+                    localStorage.setItem('exceso_materialValue', formulario9.exceso_material.value);
+                    localStorage.setItem('presencia_bolaValue', formulario9.presencia_bola.value);
+                    localStorage.setItem('estado_levantadoresValue', formulario9.estado_levantadores.value);
+                    localStorage.setItem('estado_heliceValue', formulario9.estado_helice.value);
+                }
+                registrado9 = !registrado9;
+                document.getElementById('instance9').classList.remove('bg-blue-500');
+                document.getElementById('instance9').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L10 -->  
+    <template id="ins_esp_ent" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Espejo de Entrada</h2>
+        </div>
+        <form class="formulario" id="formulario_esp_ent">
+            <label for="roturas_espejo">Roturas en el Espejo de Entrada</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_espejo" name="roturas_espejo" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div> <!-- Cambio realizado aquí -->
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar10" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario10 = document.getElementById('formulario_esp_ent');
+            botonGuardar10 = document.getElementById('botonGuardar10');
+            registrado10 = false;
+    
+            if (typeof roturas_espejoValue !== 'undefined') {document.getElementById('roturas_espejo').value = roturas_espejoValue;}
+
+            if (localStorage.getItem('roturas_espejoValue')) {roturas_espejoValue = localStorage.getItem('roturas_espejoValue'); document.getElementById('roturas_espejo').value = roturas_espejoValue;}
+
+            botonGuardar10.addEventListener('click', () => {
+                const inputs = formulario10.querySelectorAll('input');
+                
+                if (registrado10) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar10.style.backgroundColor = '';
+                    botonGuardar10.textContent = 'Guardar datos';
+                    botonGuardar10.addEventListener('mouseover', () => {botonGuardar10.style.backgroundColor = '';});
+                    botonGuardar10.addEventListener('mouseout', () => {botonGuardar10.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar10.style.backgroundColor = 'green';
+                    botonGuardar10.textContent = 'Datos guardados!';
+                    botonGuardar10.addEventListener('mouseover', () => {botonGuardar10.style.backgroundColor = '#006400';});
+                    botonGuardar10.addEventListener('mouseout', () => {botonGuardar10.style.backgroundColor = 'green';});
+                    
+                    roturas_espejoValue = formulario10.roturas_espejo.value;
+
+                    localStorage.setItem('roturas_espejoValue', roturas_espejoValue);
+                }    
+                registrado10 = !registrado10;
+                document.getElementById('instance10').classList.remove('bg-blue-500');
+                document.getElementById('instance10').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L11 -->  
+    <template id="ins_con_ent" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Cono de entrada</h2>
+        </div>
+        <form class="formulario" id="formulario_con_ent">
+            <label for="problemas_material_molino">¿Problemas para introducir el material en el molino?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="problemas_material_molino" name="problemas_material_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar11" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario11 = document.getElementById('formulario_con_ent');
+            botonGuardar11 = document.getElementById('botonGuardar11');
+            registrado11 = false;
+    
+            if (typeof problemas_material_molinoValue !== 'undefined') {document.getElementById('problemas_material_molino').value = problemas_material_molinoValue;}
+ 
+            if (localStorage.getItem('problemas_material_molinoValue')) {problemas_material_molinoValue = localStorage.getItem('problemas_material_molinoValue'); document.getElementById('problemas_material_molino').value = problemas_material_molinoValue;}
+
+            botonGuardar11.addEventListener('click', () => {
+                const inputs = formulario11.querySelectorAll('input');
+                
+                if (registrado11) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar11.style.backgroundColor = '';
+                    botonGuardar11.textContent = 'Guardar datos';
+                    botonGuardar11.addEventListener('mouseover', () => {botonGuardar11.style.backgroundColor = '';});
+                    botonGuardar11.addEventListener('mouseout', () => {botonGuardar11.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar11.style.backgroundColor = 'green';
+                    botonGuardar11.textContent = 'Datos guardados!';
+                    botonGuardar11.addEventListener('mouseover', () => {botonGuardar11.style.backgroundColor = '#006400';});
+                    botonGuardar11.addEventListener('mouseout', () => {botonGuardar11.style.backgroundColor = 'green';});
+                    
+                    problemas_material_molinoValue = formulario11.problemas_material_molino.value;
+                    
+                    localStorage.setItem('problemas_material_molinoValue', formulario11.problemas_material_molino.value);
+                }    
+                registrado11 = !registrado11;
+                document.getElementById('instance11').classList.remove('bg-blue-500');
+                document.getElementById('instance11').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L12 -->  
+    <template id="ins_blin_1_cam" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección del Blindaje de la 1° Cámara </h2>
+        </div>
+        <form class="formulario" id="formulario_blin_1_cam">
+            <label for="roturas_blin_1_cam">¿Roturas en el blindaje de la 1° cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_blin_1_cam" name="roturas_blin_1_cam" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="levantamiento_cam_1">Levantamiento (Cámara 1)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="levantamiento_cam_1" name="levantamiento_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="coating_bola_cam_1">¿Se observa coating en la bola de la cámara 1?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="coating_bola_cam_1" name="coating_bola_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="chatarra_cam_1">¿Se observa mucha chatarra en la cámara 1?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="chatarra_cam_1" name="chatarra_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="orientacion_levantamiento_cam_1">¿Orientación del levantamiento acorde al sentido de giro? (Cámara 1)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="orientacion_levantamiento_cam_1" name="orientacion_levantamiento_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="bola_segunda_cam_1">¿Se observa bola de segunda en esta cámara? (Cámara 1)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="bola_segunda_cam_1" name="bola_segunda_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="grado_llenado_cam_1">Grado de llenado de la cámara 1</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="grado_llenado_cam_1" name="grado_llenado_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="chatarra_incrustada_blin_cam_1">¿Presencia de chatarra incrustada en el blindaje de la cámara 1?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="chatarra_incrustada_blin_cam_1" name="chatarra_incrustada_blin_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inmolidos_cam_1">¿Presencia de inmolidos en la cámara 1?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inmolidos_cam_1" name="inmolidos_cam_1" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar12" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario12 = document.getElementById('formulario_blin_1_cam');
+            botonGuardar12 = document.getElementById('botonGuardar12');
+            registrado12 = false;
+    
+            if (typeof roturas_blin_1_camValue !== 'undefined') {document.getElementById('roturas_blin_1_cam').value = roturas_blin_1_camValue;}
+            if (typeof levantamiento_cam_1Value !== 'undefined') {document.getElementById('levantamiento_cam_1').value = levantamiento_cam_1Value;}
+            if (typeof coating_bola_cam_1Value !== 'undefined') {document.getElementById('coating_bola_cam_1').value = coating_bola_cam_1Value;}
+            if (typeof chatarra_cam_1Value !== 'undefined') {document.getElementById('chatarra_cam_1').value = chatarra_cam_1Value;}
+            if (typeof orientacion_levantamiento_cam_1Value !== 'undefined') {document.getElementById('orientacion_levantamiento_cam_1').value = orientacion_levantamiento_cam_1Value;}
+            if (typeof bola_segunda_cam_1Value !== 'undefined') {document.getElementById('bola_segunda_cam_1').value = bola_segunda_cam_1Value;}
+            if (typeof grado_llenado_cam_1Value !== 'undefined') {document.getElementById('grado_llenado_cam_1').value = grado_llenado_cam_1Value;}
+            if (typeof chatarra_incrustada_blin_cam_1Value !== 'undefined') {document.getElementById('chatarra_incrustada_blin_cam_1').value = chatarra_incrustada_blin_cam_1Value;}
+            if (typeof inmolidos_cam_1Value !== 'undefined') {document.getElementById('inmolidos_cam_1').value = inmolidos_cam_1Value;}
+    
+            if (localStorage.getItem('roturas_blin_1_cam')) {roturas_blin_1_camValue = localStorage.getItem('roturas_blin_1_cam'); document.getElementById('roturas_blin_1_cam').value = roturas_blin_1_camValue;}
+            if (localStorage.getItem('levantamiento_cam_1')) {levantamiento_cam_1Value = localStorage.getItem('levantamiento_cam_1'); document.getElementById('levantamiento_cam_1').value = levantamiento_cam_1Value;}
+            if (localStorage.getItem('coating_bola_cam_1')) {coating_bola_cam_1Value = localStorage.getItem('coating_bola_cam_1'); document.getElementById('coating_bola_cam_1').value = coating_bola_cam_1Value;}
+            if (localStorage.getItem('chatarra_cam_1')) {chatarra_cam_1Value = localStorage.getItem('chatarra_cam_1'); document.getElementById('chatarra_cam_1').value = chatarra_cam_1Value;}
+            if (localStorage.getItem('orientacion_levantamiento_cam_1')) {orientacion_levantamiento_cam_1Value = localStorage.getItem('orientacion_levantamiento_cam_1'); document.getElementById('orientacion_levantamiento_cam_1').value = orientacion_levantamiento_cam_1Value;}
+            if (localStorage.getItem('bola_segunda_cam_1')) {bola_segunda_cam_1Value = localStorage.getItem('bola_segunda_cam_1'); document.getElementById('bola_segunda_cam_1').value = bola_segunda_cam_1Value;}
+            if (localStorage.getItem('grado_llenado_cam_1')) {grado_llenado_cam_1Value = localStorage.getItem('grado_llenado_cam_1'); document.getElementById('grado_llenado_cam_1').value = grado_llenado_cam_1Value;}
+            if (localStorage.getItem('chatarra_incrustada_blin_cam_1')) {chatarra_incrustada_blin_cam_1Value = localStorage.getItem('chatarra_incrustada_blin_cam_1'); document.getElementById('chatarra_incrustada_blin_cam_1').value = chatarra_incrustada_blin_cam_1Value;}
+            if (localStorage.getItem('inmolidos_cam_1')) {inmolidos_cam_1Value = localStorage.getItem('inmolidos_cam_1'); document.getElementById('inmolidos_cam_1').value = inmolidos_cam_1Value;}
+
+            botonGuardar12.addEventListener('click', () => {
+                const inputs = formulario12.querySelectorAll('input');
+    
+                if (registrado12) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar12.style.backgroundColor = '';
+                    botonGuardar12.textContent = 'Guardar datos';
+                    botonGuardar12.addEventListener('mouseover', () => {botonGuardar12.style.backgroundColor = '';});
+                    botonGuardar12.addEventListener('mouseout', () => {botonGuardar12.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar12.style.backgroundColor = 'green';
+                    botonGuardar12.textContent = 'Datos guardados!';
+                    botonGuardar12.addEventListener('mouseover', () => {botonGuardar12.style.backgroundColor = '#006400';});
+                    botonGuardar12.addEventListener('mouseout', () => {botonGuardar12.style.backgroundColor = 'green';});
+    
+                    roturas_blin_1_camValue = formulario12.roturas_blin_1_cam.value;
+                    levantamiento_cam_1Value = formulario12.levantamiento_cam_1.value;
+                    coating_bola_cam_1Value = formulario12.coating_bola_cam_1.value;
+                    chatarra_cam_1Value = formulario12.chatarra_cam_1.value;
+                    orientacion_levantamiento_cam_1Value = formulario12.orientacion_levantamiento_cam_1.value;
+                    bola_segunda_cam_1Value = formulario12.bola_segunda_cam_1.value;
+                    grado_llenado_cam_1Value = formulario12.grado_llenado_cam_1.value;
+                    chatarra_incrustada_blin_cam_1Value = formulario12.chatarra_incrustada_blin_cam_1.value;
+                    inmolidos_cam_1Value = formulario12.inmolidos_cam_1.value;
+
+                    localStorage.setItem('roturas_blin_1_cam', formulario12.roturas_blin_1_cam.value);
+                    localStorage.setItem('levantamiento_cam_1', formulario12.levantamiento_cam_1.value);
+                    localStorage.setItem('coating_bola_cam_1', formulario12.coating_bola_cam_1.value);
+                    localStorage.setItem('chatarra_cam_1', formulario12.chatarra_cam_1.value);
+                    localStorage.setItem('orientacion_levantamiento_cam_1', formulario12.orientacion_levantamiento_cam_1.value);
+                    localStorage.setItem('bola_segunda_cam_1', formulario12.bola_segunda_cam_1.value);
+                    localStorage.setItem('grado_llenado_cam_1', formulario12.grado_llenado_cam_1.value);
+                    localStorage.setItem('chatarra_incrustada_blin_cam_1', formulario12.chatarra_incrustada_blin_cam_1.value);
+                    localStorage.setItem('inmolidos_cam_1', formulario12.inmolidos_cam_1.value);
+                }
+                registrado12 = !registrado12;
+                document.getElementById('instance12').classList.remove('bg-blue-500');
+                document.getElementById('instance12').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L13 -->
+    <template id="ins_tab_cen" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Tabique Central</h2>
+        </div>
+        <form class="formulario" id="formulario_tab_cen">
+            <label for="roturas_tabique_central">¿Roturas en el tabique central?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_tabique_central" name="roturas_tabique_central" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="roturas_rejilla_central">¿Hay roturas en la rejilla central y/o ranuras? (Tabique central)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_rejilla_central" name="roturas_rejilla_central" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="rejilla_tapada_central">¿La rejilla central y/o ranuras están tapadas? (Tabique central)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="rejilla_tapada_central" name="rejilla_tapada_central" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="altura_rejilla_central">¿La altura de comienzo de la rejilla limita el grado de llenado que se podría por motor? (Tabique central)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="altura_rejilla_central" name="altura_rejilla_central" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="luz_tabique_central">Luz de paso del tabique central (mm)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="luz_tabique_central" name="luz_tabique_central" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar13" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario13 = document.getElementById('formulario_tab_cen');
+            botonGuardar13 = document.getElementById('botonGuardar13');
+            registrado13 = false;
+        
+            if (typeof roturas_tabique_centralValue !== 'undefined') {document.getElementById('roturas_tabique_central').value = roturas_tabique_centralValue;}
+            if (typeof roturas_rejilla_centralValue !== 'undefined') {document.getElementById('roturas_rejilla_central').value = roturas_rejilla_centralValue;}
+            if (typeof rejilla_tapada_centralValue !== 'undefined') {document.getElementById('rejilla_tapada_central').value = rejilla_tapada_centralValue;}
+            if (typeof altura_rejilla_centralValue !== 'undefined') {document.getElementById('altura_rejilla_central').value = altura_rejilla_centralValue;}
+            if (typeof luz_tabique_centralValue !== 'undefined') {document.getElementById('luz_tabique_central').value = luz_tabique_centralValue;}
+        
+            if (localStorage.getItem('roturas_tabique_centralValue')) {roturas_tabique_centralValue = localStorage.getItem('roturas_tabique_centralValue'); document.getElementById('roturas_tabique_central').value = roturas_tabique_centralValue;}
+            if (localStorage.getItem('roturas_rejilla_centralValue')) {roturas_rejilla_centralValue = localStorage.getItem('roturas_rejilla_centralValue'); document.getElementById('roturas_rejilla_central').value = roturas_rejilla_centralValue;}
+            if (localStorage.getItem('rejilla_tapada_centralValue')) {rejilla_tapada_centralValue = localStorage.getItem('rejilla_tapada_centralValue'); document.getElementById('rejilla_tapada_central').value = rejilla_tapada_centralValue;}
+            if (localStorage.getItem('altura_rejilla_centralValue')) {altura_rejilla_centralValue = localStorage.getItem('altura_rejilla_centralValue'); document.getElementById('altura_rejilla_central').value = altura_rejilla_centralValue;}
+            if (localStorage.getItem('luz_tabique_centralValue')) {luz_tabique_centralValue = localStorage.getItem('luz_tabique_centralValue'); document.getElementById('luz_tabique_central').value = luz_tabique_centralValue;}
+
+            botonGuardar13.addEventListener('click', () => {
+                const inputs = formulario13.querySelectorAll('input');
+        
+                if (registrado13) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar13.style.backgroundColor = '';
+                    botonGuardar13.textContent = 'Guardar datos';
+                    botonGuardar13.addEventListener('mouseover', () => {botonGuardar13.style.backgroundColor = '';});
+                    botonGuardar13.addEventListener('mouseout', () => {botonGuardar13.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar13.style.backgroundColor = 'green';
+                    botonGuardar13.textContent = 'Datos guardados!';
+                    botonGuardar13.addEventListener('mouseover', () => {botonGuardar13.style.backgroundColor = '#006400';});
+                    botonGuardar13.addEventListener('mouseout', () => {botonGuardar13.style.backgroundColor = 'green';});
+                    
+                    roturas_tabique_centralValue = formulario13.roturas_tabique_central.value;
+                    roturas_rejilla_centralValue = formulario13.roturas_rejilla_central.value;
+                    rejilla_tapada_centralValue = formulario13.rejilla_tapada_central.value;
+                    altura_rejilla_centralValue = formulario13.altura_rejilla_central.value;
+                    luz_tabique_centralValue = formulario13.luz_tabique_central.value;
+
+                    localStorage.setItem('roturas_tabique_centralValue', formulario13.roturas_tabique_central.value);
+                    localStorage.setItem('roturas_rejilla_centralValue', formulario13.roturas_rejilla_central.value);
+                    localStorage.setItem('rejilla_tapada_centralValue', formulario13.rejilla_tapada_central.value);
+                    localStorage.setItem('altura_rejilla_centralValue', formulario13.altura_rejilla_central.value);
+                    localStorage.setItem('luz_tabique_centralValue', formulario13.luz_tabique_central.value);
+                }    
+                registrado13 = !registrado13;
+                document.getElementById('instance13').classList.remove('bg-blue-500');
+                document.getElementById('instance13').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L14 -->
+    <template id="ins_blin_2_cam" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección del Blindaje de la 2° Cámara </h2>
+        </div>
+        <form class="formulario" id="formulario_blin_2_cam">
+            <label for="roturas_blin_cam_2">¿Roturas en el blindaje de la 2° cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_blin_cam_2" name="roturas_blin_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="clasificacion_bolas_cam_2">¿Se mantiene una buena clasificación de bolas en la cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="clasificacion_bolas_cam_2" name="clasificacion_bolas_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="coatting_cam_2">¿Se observa coatting en la bola de la cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="coatting_cam_2" name="coatting_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="chatarra_cam_2">¿Se observa mucha chatarra en la cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="chatarra_cam_2" name="chatarra_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="bola_primera_cam_2">¿Se observa bola de primera en esta cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="bola_primera_cam_2" name="bola_primera_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="grado_llenado_cam_2">Grado de llenado de la cámara 2</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="grado_llenado_cam_2" name="grado_llenado_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="chatarra_incrustada_cam_2">¿Presencia de chatarra incrustada en el blindaje de la cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="chatarra_incrustada_cam_2" name="chatarra_incrustada_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="inmolidos_cam_2">¿Presencia de inmolidos en la cámara?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="inmolidos_cam_2" name="inmolidos_cam_2" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar14" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario14 = document.getElementById('formulario_blin_2_cam');
+            botonGuardar14 = document.getElementById('botonGuardar14');
+            registrado14 = false;
+    
+            if (typeof roturas_blin_cam_2Value !== 'undefined') {document.getElementById('roturas_blin_cam_2').value = roturas_blin_cam_2Value;}
+            if (typeof clasificacion_bolas_cam_2Value !== 'undefined') {document.getElementById('clasificacion_bolas_cam_2').value = clasificacion_bolas_cam_2Value;}
+            if (typeof coatting_cam_2Value !== 'undefined') {document.getElementById('coatting_cam_2').value = coatting_cam_2Value;}
+            if (typeof chatarra_cam_2Value !== 'undefined') {document.getElementById('chatarra_cam_2').value = chatarra_cam_2Value;}
+            if (typeof bola_primera_cam_2Value !== 'undefined') {document.getElementById('bola_primera_cam_2').value = bola_primera_cam_2Value;}
+            if (typeof grado_llenado_cam_2Value !== 'undefined') {document.getElementById('grado_llenado_cam_2').value = grado_llenado_cam_2Value;}
+            if (typeof chatarra_incrustada_cam_2Value !== 'undefined') {document.getElementById('chatarra_incrustada_cam_2').value = chatarra_incrustada_cam_2Value;}
+            if (typeof inmolidos_cam_2Value !== 'undefined') {document.getElementById('inmolidos_cam_2').value = inmolidos_cam_2Value;}
+
+            if (localStorage.getItem('roturas_blin_cam_2Value')) {roturas_blin_cam_2Value = localStorage.getItem('roturas_blin_cam_2Value'); document.getElementById('roturas_blin_cam_2').value = roturas_blin_cam_2Value;}
+            if (localStorage.getItem('clasificacion_bolas_cam_2Value')) {clasificacion_bolas_cam_2Value = localStorage.getItem('clasificacion_bolas_cam_2Value'); document.getElementById('clasificacion_bolas_cam_2').value = clasificacion_bolas_cam_2Value;}
+            if (localStorage.getItem('coatting_cam_2Value')) {coatting_cam_2Value = localStorage.getItem('coatting_cam_2Value'); document.getElementById('coatting_cam_2').value = coatting_cam_2Value;}
+            if (localStorage.getItem('chatarra_cam_2Value')) {chatarra_cam_2Value = localStorage.getItem('chatarra_cam_2Value'); document.getElementById('chatarra_cam_2').value = chatarra_cam_2Value;}
+            if (localStorage.getItem('bola_primera_cam_2Value')) {bola_primera_cam_2Value = localStorage.getItem('bola_primera_cam_2Value'); document.getElementById('bola_primera_cam_2').value = bola_primera_cam_2Value;}
+            if (localStorage.getItem('grado_llenado_cam_2Value')) {grado_llenado_cam_2Value = localStorage.getItem('grado_llenado_cam_2Value'); document.getElementById('grado_llenado_cam_2').value = grado_llenado_cam_2Value;}
+            if (localStorage.getItem('chatarra_incrustada_cam_2Value')) {chatarra_incrustada_cam_2Value = localStorage.getItem('chatarra_incrustada_cam_2Value'); document.getElementById('chatarra_incrustada_cam_2').value = chatarra_incrustada_cam_2Value;}
+            if (localStorage.getItem('inmolidos_cam_2Value')) {inmolidos_cam_2Value = localStorage.getItem('inmolidos_cam_2Value'); document.getElementById('inmolidos_cam_2').value = inmolidos_cam_2Value;}
+
+            botonGuardar14.addEventListener('click', () => {
+                const inputs = formulario14.querySelectorAll('input');
+    
+                if (registrado14) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar14.style.backgroundColor = '';
+                    botonGuardar14.textContent = 'Guardar datos';
+                    botonGuardar14.addEventListener('mouseover', () => {botonGuardar14.style.backgroundColor = '';});
+                    botonGuardar14.addEventListener('mouseout', () => {botonGuardar14.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar14.style.backgroundColor = 'green';
+                    botonGuardar14.textContent = 'Datos guardados!';
+                    botonGuardar14.addEventListener('mouseover', () => {botonGuardar14.style.backgroundColor = '#006400';});
+                    botonGuardar14.addEventListener('mouseout', () => {botonGuardar14.style.backgroundColor = 'green';});
+    
+                    roturas_blin_cam_2Value = formulario14.roturas_blin_cam_2.value;
+                    clasificacion_bolas_cam_2Value = formulario14.clasificacion_bolas_cam_2.value;
+                    coatting_cam_2Value = formulario14.coatting_cam_2.value;
+                    chatarra_cam_2Value = formulario14.chatarra_cam_2.value;
+                    bola_primera_cam_2Value = formulario14.bola_primera_cam_2.value;
+                    grado_llenado_cam_2Value = formulario14.grado_llenado_cam_2.value;
+                    chatarra_incrustada_cam_2Value = formulario14.chatarra_incrustada_cam_2.value;
+                    inmolidos_cam_2Value = formulario14.inmolidos_cam_2.value;
+
+                    localStorage.setItem('roturas_blin_cam_2Value', formulario14.roturas_blin_cam_2.value);
+                    localStorage.setItem('clasificacion_bolas_cam_2Value', formulario14.clasificacion_bolas_cam_2.value);
+                    localStorage.setItem('coatting_cam_2Value', formulario14.coatting_cam_2.value);
+                    localStorage.setItem('chatarra_cam_2Value', formulario14.chatarra_cam_2.value);
+                    localStorage.setItem('bola_primera_cam_2Value', formulario14.bola_primera_cam_2.value);
+                    localStorage.setItem('grado_llenado_cam_2Value', formulario14.grado_llenado_cam_2.value);
+                    localStorage.setItem('chatarra_incrustada_cam_2Value', formulario14.chatarra_incrustada_cam_2.value);
+                    localStorage.setItem('inmolidos_cam_2Value', formulario14.inmolidos_cam_2.value);
+                }    
+                registrado14 = !registrado14;
+                document.getElementById('instance14').classList.remove('bg-blue-500');
+                document.getElementById('instance14').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L15 -->
+    <template id="ins_tab_sal" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Tabique de Salida</h2>
+        </div>
+        <form class="formulario" id="formulario_tab_salida">
+            <label for="roturas_tabique_salida">¿Roturas en el tabique de salida?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_tabique_salida" name="roturas_tabique_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="roturas_rejilla_salida">¿Hay roturas en la rejilla de salida y/o ranuras? (Tabique de salida)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="roturas_rejilla_salida" name="roturas_rejilla_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="rejilla_tapada_salida">¿La rejilla de salida y/o ranuras están tapadas? (Tabique de salida)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="rejilla_tapada_salida" name="rejilla_tapada_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="altura_rejilla_salida">¿La altura de comienzo de la rejilla limita el grado de llenado que se podría por motor? (Tabique de salida)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="altura_rejilla_salida" name="altura_rejilla_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="luz_tabique_salida">Luz de paso del tabique de salida (mm)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="luz_tabique_salida" name="luz_tabique_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar15" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario15 = document.getElementById('formulario_tab_salida');
+            botonGuardar15 = document.getElementById('botonGuardar15');
+            registrado15 = false;
+        
+            if (typeof roturas_tabique_salidaValue !== 'undefined') {document.getElementById('roturas_tabique_salida').value = roturas_tabique_salidaValue;}
+            if (typeof roturas_rejilla_salidaValue !== 'undefined') {document.getElementById('roturas_rejilla_salida').value = roturas_rejilla_salidaValue;}
+            if (typeof rejilla_tapada_salidaValue !== 'undefined') {document.getElementById('rejilla_tapada_salida').value = rejilla_tapada_salidaValue;}
+            if (typeof altura_rejilla_salidaValue !== 'undefined') {document.getElementById('altura_rejilla_salida').value = altura_rejilla_salidaValue;}
+            if (typeof luz_tabique_salidaValue !== 'undefined') {document.getElementById('luz_tabique_salida').value = luz_tabique_salidaValue;}
+            
+            if (localStorage.getItem('roturas_tabique_salidaValue')) {roturas_tabique_salidaValue = localStorage.getItem('roturas_tabique_salidaValue');document.getElementById('roturas_tabique_salida').value = roturas_tabique_salidaValue;}
+            if (localStorage.getItem('roturas_rejilla_salidaValue')) {roturas_rejilla_salidaValue = localStorage.getItem('roturas_rejilla_salidaValue'); document.getElementById('roturas_rejilla_salida').value = roturas_rejilla_salidaValue;}
+            if (localStorage.getItem('rejilla_tapada_salidaValue')) {rejilla_tapada_salidaValue = localStorage.getItem('rejilla_tapada_salidaValue'); document.getElementById('rejilla_tapada_salida').value = rejilla_tapada_salidaValue;}
+            if (localStorage.getItem('altura_rejilla_salidaValue')) {altura_rejilla_salidaValue = localStorage.getItem('altura_rejilla_salidaValue'); document.getElementById('altura_rejilla_salida').value = altura_rejilla_salidaValue;}
+            if (localStorage.getItem('luz_tabique_salidaValue')) {luz_tabique_salidaValue = localStorage.getItem('luz_tabique_salidaValue'); document.getElementById('luz_tabique_salida').value = luz_tabique_salidaValue;}
+
+            botonGuardar15.addEventListener('click', () => {
+                const inputs = formulario15.querySelectorAll('input');
+        
+                if (registrado15) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar15.style.backgroundColor = '';
+                    botonGuardar15.textContent = 'Guardar datos';
+                    botonGuardar15.addEventListener('mouseover', () => {botonGuardar15.style.backgroundColor = '';});
+                    botonGuardar15.addEventListener('mouseout', () => {botonGuardar15.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar15.style.backgroundColor = 'green';
+                    botonGuardar15.textContent = 'Datos guardados!';
+                    botonGuardar15.addEventListener('mouseover', () => {botonGuardar15.style.backgroundColor = '#006400';});
+                    botonGuardar15.addEventListener('mouseout', () => {botonGuardar15.style.backgroundColor = 'green';});
+                    
+                    roturas_tabique_salidaValue = formulario15.roturas_tabique_salida.value;
+                    roturas_rejilla_salidaValue = formulario15.roturas_rejilla_salida.value;
+                    rejilla_tapada_salidaValue = formulario15.rejilla_tapada_salida.value;
+                    altura_rejilla_salidaValue = formulario15.altura_rejilla_salida.value;
+                    luz_tabique_salidaValue = formulario15.luz_tabique_salida.value;
+
+                    localStorage.setItem('roturas_tabique_salidaValue', formulario15.roturas_tabique_salida.value);
+                    localStorage.setItem('roturas_rejilla_salidaValue', formulario15.roturas_rejilla_salida.value);
+                    localStorage.setItem('rejilla_tapada_salidaValue', formulario15.rejilla_tapada_salida.value);
+                    localStorage.setItem('altura_rejilla_salidaValue', formulario15.altura_rejilla_salida.value);
+                    localStorage.setItem('luz_tabique_salidaValue', formulario15.luz_tabique_salida.value);
+
+                }    
+                registrado15 = !registrado15;
+                document.getElementById('instance15').classList.remove('bg-blue-500');
+                document.getElementById('instance15').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L16 -->
+    <template id="ins_iny_agu_sal" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Inyección de Agua de Salida</h2>
+        </div>
+        <form class="formulario" id="formulario_iny_agu_sal">
+            <label for="boquilla_taponada">¿Boquilla taponada?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="boquilla_taponada" name="boquilla_taponada" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="orienta_material">¿Orienta hacia el material?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="orienta_material" name="orienta_material" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="llega_tabique">¿Llega al tabique intermedio?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="llega_tabique" name="llega_tabique" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="atomiza_bien">¿Atomiza bien?</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="atomiza_bien" name="atomiza_bien" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar16" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario16 = document.getElementById('formulario_iny_agu_sal');
+            botonGuardar16 = document.getElementById('botonGuardar16');
+            registrado16 = false;
+    
+            if (typeof boquilla_taponadaValue !== 'undefined') {document.getElementById('boquilla_taponada').value = boquilla_taponadaValue;}
+            if (typeof orienta_materialValue !== 'undefined') {document.getElementById('orienta_material').value = orienta_materialValue;}
+            if (typeof llega_tabiqueValue !== 'undefined') {document.getElementById('llega_tabique').value = llega_tabiqueValue;}
+            if (typeof atomiza_bienValue !== 'undefined') {document.getElementById('atomiza_bien').value = atomiza_bienValue;}
+            
+            if (localStorage.getItem('boquilla_taponadaValue')) {boquilla_taponadaValue = localStorage.getItem('boquilla_taponadaValue');document.getElementById('boquilla_taponada').value = boquilla_taponadaValue;}
+            if (localStorage.getItem('orienta_materialValue')) {orienta_materialValue = localStorage.getItem('orienta_materialValue');document.getElementById('orienta_material').value = orienta_materialValue;}
+            if (localStorage.getItem('llega_tabiqueValue')) {llega_tabiqueValue = localStorage.getItem('llega_tabiqueValue');document.getElementById('llega_tabique').value = llega_tabiqueValue;}
+            if (localStorage.getItem('atomiza_bienValue')) {atomiza_bienValue = localStorage.getItem('atomiza_bienValue');document.getElementById('atomiza_bien').value = atomiza_bienValue;}
+
+            botonGuardar16.addEventListener('click', () => {
+                const inputs = formulario16.querySelectorAll('input');
+                
+                if (registrado16) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar16.style.backgroundColor = '';
+                    botonGuardar16.textContent = 'Guardar datos';
+                    botonGuardar16.addEventListener('mouseover', () => {botonGuardar16.style.backgroundColor = '';});
+                    botonGuardar16.addEventListener('mouseout', () => {botonGuardar16.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar16.style.backgroundColor = 'green';
+                    botonGuardar16.textContent = 'Datos guardados!';
+                    botonGuardar16.addEventListener('mouseover', () => {botonGuardar16.style.backgroundColor = '#006400';});
+                    botonGuardar16.addEventListener('mouseout', () => {botonGuardar16.style.backgroundColor = 'green';});
+                    
+                    boquilla_taponadaValue = formulario16.boquilla_taponada.value;
+                    orienta_materialValue = formulario16.orienta_material.value;
+                    llega_tabiqueValue = formulario16.llega_tabique.value;
+                    atomiza_bienValue = formulario16.atomiza_bien.value;
+
+                    localStorage.setItem('boquilla_taponadaValue', formulario16.boquilla_taponada.value);
+                    localStorage.setItem('orienta_materialValue', formulario16.orienta_material.value);
+                    localStorage.setItem('llega_tabiqueValue', formulario16.llega_tabique.value);
+                    localStorage.setItem('atomiza_bienValue', formulario16.atomiza_bien.value);
+                }    
+                registrado16 = !registrado16;
+                document.getElementById('instance16').classList.remove('bg-blue-500');
+                document.getElementById('instance16').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L17 -->
+    <template id="ins_air_fal" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Aire Falso</h2>
+        </div>
+        <form class="formulario" id="formulario_air_fal">
+            <label for="entrada_aire_falso">Entrada de Aire Falso</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="entrada_aire_falso" name="entrada_aire_falso" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="cierre_esclusa_aero">Cierre de Esclusa hacia el Aero</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="cierre_esclusa_aero" name="cierre_esclusa_aero" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar17" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario17 = document.getElementById('formulario_air_fal');
+            botonGuardar17 = document.getElementById('botonGuardar17');
+            registrado17 = false;
+    
+            if (typeof entrada_aire_falsoValue !== 'undefined') {document.getElementById('entrada_aire_falso').value = entrada_aire_falsoValue;}
+            if (typeof cierre_esclusa_aeroValue !== 'undefined') {document.getElementById('cierre_esclusa_aero').value = cierre_esclusa_aeroValue;}
+    
+            if (localStorage.getItem('entrada_aire_falsoValue')) {entrada_aire_falsoValue = localStorage.getItem('entrada_aire_falsoValue');document.getElementById('entrada_aire_falso').value = entrada_aire_falsoValue;}
+            if (localStorage.getItem('cierre_esclusa_aeroValue')) {cierre_esclusa_aeroValue = localStorage.getItem('cierre_esclusa_aeroValue'); document.getElementById('cierre_esclusa_aero').value = cierre_esclusa_aeroValue;}
+
+            botonGuardar17.addEventListener('click', () => {
+                const inputs = formulario17.querySelectorAll('input');
+                
+                if (registrado17) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar17.style.backgroundColor = '';
+                    botonGuardar17.textContent = 'Guardar datos';
+                    botonGuardar17.addEventListener('mouseover', () => {botonGuardar17.style.backgroundColor = '';});
+                    botonGuardar17.addEventListener('mouseout', () => {botonGuardar17.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar17.style.backgroundColor = 'green';
+                    botonGuardar17.textContent = 'Datos guardados!';
+                    botonGuardar17.addEventListener('mouseover', () => {botonGuardar17.style.backgroundColor = '#006400';});
+                    botonGuardar17.addEventListener('mouseout', () => {botonGuardar17.style.backgroundColor = 'green';});
+                    
+                    entrada_aire_falsoValue = formulario17.entrada_aire_falso.value;
+                    cierre_esclusa_aeroValue = formulario17.cierre_esclusa_aero.value;
+
+                    localStorage.setItem('entrada_aire_falsoValue', formulario17.entrada_aire_falso.value);
+                    localStorage.setItem('cierre_esclusa_aeroValue', formulario17.cierre_esclusa_aero.value);                    
+                }    
+                registrado17 = !registrado17;
+                document.getElementById('instance17').classList.remove('bg-blue-500');
+                document.getElementById('instance17').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+
+    <!-- L18 -->
+    <template id="ins_ven_mol" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de ventilador de molino</h2>
+        </div>
+        <form class="formulario" id="formulario_ven_mol">
+            <label for="caudal">Caudal (m3/h)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="caudal" name="caudal" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="diametro_molino">Diámetro de Molino</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="diametro_molino" name="diametro_molino" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="grado_llenado">Grado de Llenado</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="grado_llenado" name="grado_llenado" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="velocidad">Velocidad (m/s)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="velocidad" name="velocidad" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="porcentaje_flotacion">% Mat. en Flotación</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="porcentaje_flotacion" name="porcentaje_flotacion" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar18" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario18 = document.getElementById('formulario_ven_mol');
+            botonGuardar18 = document.getElementById('botonGuardar18');
+            registrado18 = false;
+    
+            if (typeof caudalValue !== 'undefined') {document.getElementById('caudal').value = caudalValue;}
+            if (typeof diametro_molinoValue !== 'undefined') {document.getElementById('diametro_molino').value = diametro_molinoValue;}
+            if (typeof grado_llenadoValue !== 'undefined') {document.getElementById('grado_llenado').value = grado_llenadoValue;}
+            if (typeof velocidadValue !== 'undefined') {document.getElementById('velocidad').value = velocidadValue;}
+            if (typeof porcentaje_flotacionValue !== 'undefined') {document.getElementById('porcentaje_flotacion').value = porcentaje_flotacionValue;}
+
+            if (localStorage.getItem('caudalValue')) {caudalValue = localStorage.getItem('caudalValue'); document.getElementById('caudal').value = caudalValue;}
+            if (localStorage.getItem('diametro_molinoValue')) {diametro_molinoValue = localStorage.getItem('diametro_molinoValue'); document.getElementById('diametro_molino').value = diametro_molinoValue;}
+            if (localStorage.getItem('grado_llenadoValue')) {grado_llenadoValue = localStorage.getItem('grado_llenadoValue'); document.getElementById('grado_llenado').value = grado_llenadoValue;}
+            if (localStorage.getItem('velocidadValue')) {velocidadValue = localStorage.getItem('velocidadValue'); document.getElementById('velocidad').value = velocidadValue;}
+            if (localStorage.getItem('porcentaje_flotacionValue')) {porcentaje_flotacionValue = localStorage.getItem('porcentaje_flotacionValue'); document.getElementById('porcentaje_flotacion').value = porcentaje_flotacionValue;}
+
+            botonGuardar18.addEventListener('click', () => {
+                const inputs = formulario18.querySelectorAll('input');
+    
+                if (registrado18) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar18.style.backgroundColor = '';
+                    botonGuardar18.textContent = 'Guardar datos';
+                    botonGuardar18.addEventListener('mouseover', () => {botonGuardar18.style.backgroundColor = '';});
+                    botonGuardar18.addEventListener('mouseout', () => {botonGuardar18.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar18.style.backgroundColor = 'green';
+                    botonGuardar18.textContent = 'Datos guardados!';
+                    botonGuardar18.addEventListener('mouseover', () => {botonGuardar18.style.backgroundColor = '#006400';});
+                    botonGuardar18.addEventListener('mouseout', () => {botonGuardar18.style.backgroundColor = 'green';});
+    
+                    caudalValue = formulario18.caudal.value;
+                    diametro_molinoValue = formulario18.diametro_molino.value;
+                    grado_llenadoValue = formulario18.grado_llenado.value;
+                    velocidadValue = formulario18.velocidad.value;
+                    porcentaje_flotacionValue = formulario18.porcentaje_flotacion.value;
+
+                    localStorage.setItem('caudalValue', formulario18.caudal.value);
+                    localStorage.setItem('diametro_molinoValue', formulario18.diametro_molino.value);
+                    localStorage.setItem('grado_llenadoValue', formulario18.grado_llenado.value);
+                    localStorage.setItem('velocidadValue', formulario18.velocidad.value);
+                    localStorage.setItem('porcentaje_flotacionValue', formulario18.porcentaje_flotacion.value);
+                }    
+                registrado18 = !registrado18;
+                document.getElementById('instance18').classList.remove('bg-blue-500');
+                document.getElementById('instance18').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- L19 -->
+    <template id="ins_air_fal_2_pun" class="hidden">
+        <div class="header">
+            <h2 class="text-lg font-semibold mb-4">Inspección de Aire falso entre dos puntos</h2>
+        </div>
+        <form class="formulario" id="formulario_air_fal_2_pun">
+            <label for="oxigeno_entrada">Oxígeno a la Entrada</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="oxigeno_entrada" name="oxigeno_entrada" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="oxigeno_salida">Oxígeno a la Salida</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="oxigeno_salida" name="oxigeno_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="caudal_salida">Caudal a la Salida (m3/h)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="caudal_salida" name="caudal_salida" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="caudal_aire_falso">Caudal Aire Falso (m3/h)</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="caudal_aire_falso" name="caudal_aire_falso" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <label for="porcentaje_aire_falso">% Aire Falso</label>
+            <div class="contenedor-input mt-2 mb-2"><input type="text" id="porcentaje_aire_falso" name="porcentaje_aire_falso" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+            <div class="contenedor-boton">
+                <button type="button" id="botonGuardar19" class="oswald instance mt-3 mb-1 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Guardar datos</button>
+            </div>
+        </form>
+        <script>
+            formulario19 = document.getElementById('formulario_air_fal_2_pun');
+            botonGuardar19 = document.getElementById('botonGuardar19');
+            registrado19 = false;
+    
+            if (typeof oxigeno_entradaValue !== 'undefined') {document.getElementById('oxigeno_entrada').value = oxigeno_entradaValue;}
+            if (typeof oxigeno_salidaValue !== 'undefined') {document.getElementById('oxigeno_salida').value = oxigeno_salidaValue;}
+            if (typeof caudal_salidaValue !== 'undefined') {document.getElementById('caudal_salida').value = caudal_salidaValue;}
+            if (typeof caudal_aire_falsoValue !== 'undefined') {document.getElementById('caudal_aire_falso').value = caudal_aire_falsoValue;}
+            if (typeof porcentaje_aire_falsoValue !== 'undefined') {document.getElementById('porcentaje_aire_falso').value = porcentaje_aire_falsoValue;}
+
+            if (localStorage.getItem('oxigeno_entradaValue')) {oxigeno_entradaValue = localStorage.getItem('oxigeno_entradaValue'); document.getElementById('oxigeno_entrada').value = oxigeno_entradaValue;}
+            if (localStorage.getItem('oxigeno_salidaValue')) {oxigeno_salidaValue = localStorage.getItem('oxigeno_salidaValue'); document.getElementById('oxigeno_salida').value = oxigeno_salidaValue;}
+            if (localStorage.getItem('caudal_salidaValue')) {caudal_salidaValue = localStorage.getItem('caudal_salidaValue'); document.getElementById('caudal_salida').value = caudal_salidaValue;}
+            if (localStorage.getItem('caudal_aire_falsoValue')) {caudal_aire_falsoValue = localStorage.getItem('caudal_aire_falsoValue'); document.getElementById('caudal_aire_falso').value = caudal_aire_falsoValue;}
+            if (localStorage.getItem('porcentaje_aire_falsoValue')) {porcentaje_aire_falsoValue = localStorage.getItem('porcentaje_aire_falsoValue'); document.getElementById('porcentaje_aire_falso').value = porcentaje_aire_falsoValue;}
+
+            botonGuardar19.addEventListener('click', () => {
+                const inputs = formulario19.querySelectorAll('input');
+    
+                if (registrado19) {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                        input.style.backgroundColor = '';
+                    });
+                    botonGuardar19.style.backgroundColor = '';
+                    botonGuardar19.textContent = 'Guardar datos';
+                    botonGuardar19.addEventListener('mouseover', () => {botonGuardar19.style.backgroundColor = '';});
+                    botonGuardar19.addEventListener('mouseout', () => {botonGuardar19.style.backgroundColor = '';});
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.backgroundColor = '#f2f2f2';
+                    });
+                    botonGuardar19.style.backgroundColor = 'green';
+                    botonGuardar19.textContent = 'Datos guardados!';
+                    botonGuardar19.addEventListener('mouseover', () => {botonGuardar19.style.backgroundColor = '#006400';});
+                    botonGuardar19.addEventListener('mouseout', () => {botonGuardar19.style.backgroundColor = 'green';});
+    
+                    oxigeno_entradaValue = formulario19.oxigeno_entrada.value;
+                    oxigeno_salidaValue = formulario19.oxigeno_salida.value;
+                    caudal_salidaValue = formulario19.caudal_salida.value;
+                    caudal_aire_falsoValue = formulario19.caudal_aire_falso.value;
+                    porcentaje_aire_falsoValue = formulario19.porcentaje_aire_falso.value;
+
+                    localStorage.setItem('oxigeno_entradaValue', formulario19.oxigeno_entrada.value);
+                    localStorage.setItem('oxigeno_salidaValue', formulario19.oxigeno_salida.value);
+                    localStorage.setItem('caudal_salidaValue', formulario19.caudal_salida.value);
+                    localStorage.setItem('caudal_aire_falsoValue', formulario19.caudal_aire_falso.value);
+                    localStorage.setItem('porcentaje_aire_falsoValue', formulario19.porcentaje_aire_falso.value);
+                }
+                registrado19 = !registrado19;
+                document.getElementById('instance19').classList.remove('bg-blue-500');
+                document.getElementById('instance19').classList.add('bg-blue-800');
+            });
+        </script>
+    </template>
+    
+    <!-- Confirmacion -->
+    <div id="confirmacionModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white p-[20px]">
+                    <h2 class="text-lg font-semibold mb-4 text-center">Confirmación</h2>
+                    <label for="nombreInput">Ingrese su nombre:</label>
+                    <div class="contenedor-input mt-2 mb-2"><input type="text" id="nombreInput" name="nombreInput" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                    <label for="fechaInput">Ingrese la fecha de la inspección:</label>
+                    <div class="contenedor-input mt-2 mb-2"><input type="date" id="fechaInput" name="fechaInput" class="w-full border rounded px-3 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></div>
+                </div>
+                <div class="bg-gray-50 p-[20px] pt-[0px] sm:flex sm:flex-row-reverse">
+                    <button id="enviarConfirmacion" type="button" class="w-full inline-flex justify-center border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm">Enviar datos al registro</button>
+                    <button id="cancelarConfirmacion" type="button" class="mt-3 w-full inline-flex justify-center border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alerta de datos enviados correctamente -->
+    <div id="alertModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white p-4">
+                    <p class="message text-center text-gray-900"></p>
+                </div>
+                <div class="bg-gray-50 p-4 pt-0 sm:flex flex-col-reverse justify-center">
+                    <a href="/" class="w-full inline-flex justify-center border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm">Aceptar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        for (let i = 0; i <= 19; i++) {
+            eval(`let formulario${i}, botonGuardar${i}, registrado${i};`);
+        }
+
+        // Variables para los valores de los formularios
+        const variables = [
+            "toberasShowImageButton", "toberasModal", "modalImage", "closeImageModal",
+            "placasArmorRingShowImageButton", "placasArmorRingModal", "placasArmorRingImage", "placasArmorRingImageModal",
+            "placasLouvreRingShowImageButton", "placasLouvreRingModal", "placasLouvreRingImage", "placasLouvreRingImageModal",
+            "tapasRodillosShowImageButton", "tapasRodillosModal", "tapasRodillosImage", "tapasRodillosImageModal",
+            "acumuladoresShowImageButton", "acumuladoresModal", "acumuladoresImage", "acumuladoresImageModal",
+            "alturaDamRingShowImageButton", "alturaDamRingModal", "alturaDamRingImage", "alturaDamRingImageModal",
+            "selloShowImageButton", "selloModal", "selloImage", "selloImageModal",
+
+            "tem_riserValue", "tem_ent_calValue", "tem_ter_ent_calValue", "tem_cic_ivValue", "tem_gas_cic_ivValue", "tem_cic_gemValue", "ana_sal_torValue", "vel_id_fanValue", "pres_sal_gas_idValue", "dam_air_terValue", 
+            "entrada_hornoValue", "grado_llenado_hornoValue", "oxigenoValue", "coValue", "presion_entrada_hornoValue", "alimentacion_hornoValue", "aire_secundarioValue", "zona_sinterizacionValue", "error_balanzas_carbonValue", "inyeccion_carbonValue", "potencia_motor_hornoValue", 
+            "regleta_swirlValue", "aire_primarioValue",
+            "presion_cabezalValue", "presion_cama_enfriadorValue", "temperatura_clinkerValue", "flujo_aire_clinkerValue",
+            "flujo_ventilador_m3Value", "presion_hidraulica_m3Value", "presion_succion_m3Value", "presion_diferencial_molino_m3Value",
+            "temperatura_gases_salida_molino_m3Value", "inyeccion_agua_molino_m3Value", "inyeccion_aditivo_m3Value", "velocidad_clasificador_m3Value",
+            "alimentacion_molino_m3Value", "potencia_motor_principal_m3Value",
+            "flujo_ventilador_m7Value", "presion_hidraulica_m7Value", "presion_succion_m7Value", "presion_diferencial_molino_m7Value",
+            "temperatura_gases_salida_molino_m7Value", "inyeccion_agua_molino_m7Value", "inyeccion_aditivo_m7Value", "velocidad_clasificador_m7Value",
+            "alimentacion_molino_m7Value", "potencia_motor_principal_m7Value",
+            "altura_toberas_mesaValue", "incl_placas_armor_ringValue", "incl_placas_lourve_ringValue", "verificar_tapas_rodillosValue",
+            "verificar_presion_acumuladoresValue", "altura_dam_ringValue",
+            "revisar_selloValue", "verificar_distancia_alabesValue",
+            "exceso_materialValue", "presencia_bolaValue", "estado_levantadoresValue", "estado_heliceValue",
+            "roturas_espejoValue",
+            "problemas_material_molinoValue",
+            "roturas_blin_1_camValue", "levantamiento_cam_1Value", "coating_bola_cam_1Value", "chatarra_cam_1Value", "orientacion_levantamiento_cam_1Value",
+            "bola_segunda_cam_1Value", "grado_llenado_cam_1Value", "chatarra_incrustada_blin_cam_1Value", "inmolidos_cam_1Value",
+            "roturas_tabique_centralValue", "roturas_rejilla_centralValue", "rejilla_tapada_centralValue", "altura_rejilla_centralValue", "luz_tabique_centralValue",
+            "roturas_blin_cam_2Value", "clasificacion_bolas_cam_2Value", "coatting_cam_2Value", "chatarra_cam_2Value", "bola_primera_cam_2Value",
+            "grado_llenado_cam_2Value", "chatarra_incrustada_cam_2Value", "inmolidos_cam_2Value",
+            "roturas_tabique_salidaValue", "roturas_rejilla_salidaValue", "rejilla_tapada_salidaValue", "altura_rejilla_salidaValue", "luz_tabique_salidaValue",
+            "boquilla_taponadaValue", "orienta_materialValue", "llega_tabiqueValue", "atomiza_bienValue",
+            "entrada_aire_falsoValue", "cierre_esclusa_aeroValue",
+            "caudalValue", "diametro_molinoValue", "grado_llenadoValue", "velocidadValue", "porcentaje_flotacionValue",
+            "oxigeno_entradaValue", "oxigeno_salidaValue", "caudal_salidaValue", "caudal_aire_falsoValue", "porcentaje_aire_falsoValue"
+        ];
+
+        // Declaración de variables
+        variables.forEach(variable => window[variable] = '');
+
+        const enviarConfirmacionButton = document.getElementById('enviarConfirmacion');
+        const enviarDatos = document.getElementById('enviarDatos');
+        const cancelarConfirmacionButton = document.getElementById('cancelarConfirmacion');
+        const enviarDatosButton = document.getElementById('enviarDatos');
+        
+        // Boton de creacion de pestaña de confirmacion
+        enviarDatosButton.addEventListener('click', () => {
+            const modal = document.getElementById('confirmacionModal');
+            modal.classList.remove('hidden');
+        });
+
+        // Creacion de pestaña de alerta de envio de datos
+        function verAlerta(message) {
+            const alertModal = document.getElementById('alertModal');
+            const messageContainer = alertModal.querySelector('.message');
+            messageContainer.textContent = message;
+            alertModal.classList.remove('hidden');
+        }
+
+        // Funcion de cancelacion de confirmacion
+        cancelarConfirmacionButton.addEventListener('click', () => {
+            const modal = document.getElementById('confirmacionModal');
+            modal.classList.add('hidden');
+        });
+
+        // Funcion de envio de datos
+        enviarConfirmacionButton.addEventListener('click', async () => {
+            const nombre = document.getElementById('nombreInput').value;
+            const fecha = document.getElementById('fechaInput').value;
+            const enviarConfirmacionButton = document.getElementById('enviarConfirmacion');
+
+            enviarConfirmacionButton.textContent = 'Enviando los datos...';
+            enviarConfirmacionButton.classList.remove('bg-purple-600');
+            enviarConfirmacionButton.classList.add('bg-purple-400');
+            enviarConfirmacionButton.disabled = true;
+
+            tem_riserValue = localStorage.getItem('tem_riserValue');
+            tem_ent_calValue = localStorage.getItem('tem_ent_calValue');
+            tem_ter_ent_calValue = localStorage.getItem('tem_ter_ent_calValue');
+            tem_cic_ivValue = localStorage.getItem('tem_cic_ivValue');
+            tem_gas_cic_ivValue = localStorage.getItem('tem_gas_cic_ivValue');
+            tem_cic_gemValue = localStorage.getItem('tem_cic_gemValue');
+            ana_sal_torValue = localStorage.getItem('ana_sal_torValue');
+            vel_id_fanValue = localStorage.getItem('vel_id_fanValue');
+            pres_sal_gas_idValue = localStorage.getItem('pres_sal_gas_idValue');
+            dam_air_terValue = localStorage.getItem('dam_air_terValue');
+            entrada_hornoValue = localStorage.getItem('entrada_hornoValue');
+            grado_llenado_hornoValue = localStorage.getItem('grado_llenado_hornoValue');
+            oxigenoValue = localStorage.getItem('oxigenoValue');
+            coValue = localStorage.getItem('coValue');
+            presion_entrada_hornoValue = localStorage.getItem('presion_entrada_hornoValue');
+            alimentacion_hornoValue = localStorage.getItem('alimentacion_hornoValue');
+            aire_secundarioValue = localStorage.getItem('aire_secundarioValue');
+            zona_sinterizacionValue = localStorage.getItem('zona_sinterizacionValue');
+            error_balanzas_carbonValue = localStorage.getItem('error_balanzas_carbonValue');
+            inyeccion_carbonValue = localStorage.getItem('inyeccion_carbonValue');
+            potencia_motor_hornoValue = localStorage.getItem('potencia_motor_hornoValue');
+            regleta_swirlValue = localStorage.getItem('regleta_swirlValue');
+            aire_primarioValue = localStorage.getItem('aire_primarioValue');
+            presion_cabezalValue = localStorage.getItem('presion_cabezalValue');
+            presion_cama_enfriadorValue = localStorage.getItem('presion_cama_enfriadorValue');
+            temperatura_clinkerValue = localStorage.getItem('temperatura_clinkerValue');
+            flujo_aire_clinkerValue = localStorage.getItem('flujo_aire_clinkerValue');
+            flujo_ventilador_m3Value = localStorage.getItem('flujo_ventilador_m3Value');
+            presion_hidraulica_m3Value = localStorage.getItem('presion_hidraulica_m3Value');
+            presion_succion_m3Value = localStorage.getItem('presion_succion_m3Value');
+            presion_diferencial_molino_m3Value = localStorage.getItem('presion_diferencial_molino_m3Value');
+            temperatura_gases_salida_molino_m3Value = localStorage.getItem('temperatura_gases_salida_molino_m3Value');
+            inyeccion_agua_molino_m3Value = localStorage.getItem('inyeccion_agua_molino_m3Value');
+            inyeccion_aditivo_m3Value = localStorage.getItem('inyeccion_aditivo_m3Value');
+            velocidad_clasificador_m3Value = localStorage.getItem('velocidad_clasificador_m3Value');
+            alimentacion_molino_m3Value = localStorage.getItem('alimentacion_molino_m3Value');
+            potencia_motor_principal_m3Value = localStorage.getItem('potencia_motor_principal_m3Value');
+            flujo_ventilador_m7Value = localStorage.getItem('flujo_ventilador_m7Value');
+            presion_hidraulica_m7Value = localStorage.getItem('presion_hidraulica_m7Value');
+            presion_succion_m7Value = localStorage.getItem('presion_succion_m7Value');
+            presion_diferencial_molino_m7Value = localStorage.getItem('presion_diferencial_molino_m7Value');
+            temperatura_gases_salida_molino_m7Value = localStorage.getItem('temperatura_gases_salida_molino_m7Value');
+            inyeccion_agua_molino_m7Value = localStorage.getItem('inyeccion_agua_molino_m7Value');
+            inyeccion_aditivo_m7Value = localStorage.getItem('inyeccion_aditivo_m7Value');
+            velocidad_clasificador_m7Value = localStorage.getItem('velocidad_clasificador_m7Value');
+            alimentacion_molino_m7Value = localStorage.getItem('alimentacion_molino_m7Value');
+            potencia_motor_principal_m7Value = localStorage.getItem('potencia_motor_principal_m7Value');
+            altura_toberas_mesaValue = localStorage.getItem('altura_toberas_mesaValue');
+            incl_placas_armor_ringValue = localStorage.getItem('incl_placas_armor_ringValue');
+            incl_placas_lourve_ringValue = localStorage.getItem('incl_placas_lourve_ringValue');
+            verificar_tapas_rodillosValue = localStorage.getItem('verificar_tapas_rodillosValue');
+            verificar_presion_acumuladoresValue = localStorage.getItem('verificar_presion_acumuladoresValue');
+            altura_dam_ringValue = localStorage.getItem('altura_dam_ringValue');
+            revisar_selloValue = localStorage.getItem('revisar_selloValue');
+            verificar_distancia_alabesValue = localStorage.getItem('verificar_distancia_alabesValue');
+            exceso_materialValue = localStorage.getItem('exceso_materialValue');
+            presencia_bolaValue = localStorage.getItem('presencia_bolaValue');
+            estado_levantadoresValue = localStorage.getItem('estado_levantadoresValue');
+            estado_heliceValue = localStorage.getItem('estado_heliceValue');
+            roturas_espejoValue = localStorage.getItem('roturas_espejoValue');
+            problemas_material_molinoValue = localStorage.getItem('problemas_material_molinoValue');
+            roturas_blin_1_camValue = localStorage.getItem('roturas_blin_1_cam');
+            levantamiento_cam_1Value = localStorage.getItem('levantamiento_cam_1');
+            coating_bola_cam_1Value = localStorage.getItem('coating_bola_cam_1');
+            chatarra_cam_1Value = localStorage.getItem('chatarra_cam_1');
+            orientacion_levantamiento_cam_1Value = localStorage.getItem('orientacion_levantamiento_cam_1');
+            bola_segunda_cam_1Value = localStorage.getItem('bola_segunda_cam_1');
+            grado_llenado_cam_1Value = localStorage.getItem('grado_llenado_cam_1');
+            chatarra_incrustada_blin_cam_1Value = localStorage.getItem('chatarra_incrustada_blin_cam_1');
+            inmolidos_cam_1Value = localStorage.getItem('inmolidos_cam_1');
+            roturas_tabique_centralValue = localStorage.getItem('roturas_tabique_centralValue');
+            roturas_rejilla_centralValue = localStorage.getItem('roturas_rejilla_centralValue');
+            rejilla_tapada_centralValue = localStorage.getItem('rejilla_tapada_centralValue');
+            altura_rejilla_centralValue = localStorage.getItem('altura_rejilla_centralValue');
+            luz_tabique_centralValue = localStorage.getItem('luz_tabique_centralValue');
+            roturas_blin_cam_2Value = localStorage.getItem('roturas_blin_cam_2Value');
+            clasificacion_bolas_cam_2Value = localStorage.getItem('clasificacion_bolas_cam_2Value');
+            coatting_cam_2Value = localStorage.getItem('coatting_cam_2Value');
+            chatarra_cam_2Value = localStorage.getItem('chatarra_cam_2Value');
+            bola_primera_cam_2Value = localStorage.getItem('bola_primera_cam_2Value');
+            grado_llenado_cam_2Value = localStorage.getItem('grado_llenado_cam_2Value');
+            chatarra_incrustada_cam_2Value = localStorage.getItem('chatarra_incrustada_cam_2Value');
+            inmolidos_cam_2Value = localStorage.getItem('inmolidos_cam_2Value');
+            roturas_tabique_salidaValue = localStorage.getItem('roturas_tabique_salidaValue');
+            roturas_rejilla_salidaValue = localStorage.getItem('roturas_rejilla_salidaValue');
+            rejilla_tapada_salidaValue = localStorage.getItem('rejilla_tapada_salidaValue');
+            altura_rejilla_salidaValue = localStorage.getItem('altura_rejilla_salidaValue');
+            luz_tabique_salidaValue = localStorage.getItem('luz_tabique_salidaValue');
+            boquilla_taponadaValue = localStorage.getItem('boquilla_taponadaValue');
+            orienta_materialValue = localStorage.getItem('orienta_materialValue');
+            llega_tabiqueValue = localStorage.getItem('llega_tabiqueValue');
+            atomiza_bienValue = localStorage.getItem('atomiza_bienValue');
+            entrada_aire_falsoValue = localStorage.getItem('entrada_aire_falsoValue');
+            cierre_esclusa_aeroValue = localStorage.getItem('cierre_esclusa_aeroValue');
+            caudalValue = localStorage.getItem('caudalValue');
+            diametro_molinoValue = localStorage.getItem('diametro_molinoValue');
+            grado_llenadoValue = localStorage.getItem('grado_llenadoValue');
+            velocidadValue = localStorage.getItem('velocidadValue');
+            porcentaje_flotacionValue = localStorage.getItem('porcentaje_flotacionValue');
+            oxigeno_entradaValue = localStorage.getItem('oxigeno_entradaValue');
+            oxigeno_salidaValue = localStorage.getItem('oxigeno_salidaValue');
+            caudal_salidaValue = localStorage.getItem('caudal_salidaValue');
+            caudal_aire_falsoValue = localStorage.getItem('caudal_aire_falsoValue');
+            porcentaje_aire_falsoValue = localStorage.getItem('porcentaje_aire_falsoValue');
+
+            try {
+                const respuesta = await fetch('https://sheet.best/api/sheets/ee8a3307-1256-4f2d-bf16-2d7d649b5289', {
+                    method: "POST",
+                    mode: "cors",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+
+                        // Fecha y nombre
+                        "Inspector": nombre,
+                        "Fecha": fecha,
+
+                        // Intercambiador
+                        "Temperatura del Riser": tem_riserValue,
+                        "Temperatura Entrada al Calcinador": tem_ent_calValue,
+                        "Temperatura Aire Terciario Entrada Calcinador": tem_ter_ent_calValue,
+                        "T° Descarga Ciclon IV": tem_cic_ivValue,
+                        "T° Gases Ciclon IV": tem_gas_cic_ivValue,
+                        "T° Salida Ciclones Gemelos": tem_cic_gemValue,
+                        "Analizador Salida de la Torre": ana_sal_torValue,
+                        "Velocidad ID Fan": vel_id_fanValue,
+                        "Presion Salida de Gases del ID": pres_sal_gas_idValue,
+                        "Damper Aire Terciario": dam_air_terValue,
+
+                        // Horno
+                        "Entrada al Horno": entrada_hornoValue,
+                        "Grado de Llenado del Horno": grado_llenado_hornoValue,
+                        "Oxigeno": oxigenoValue,
+                        "CO": coValue,
+                        "Presion de Entrada al Horno": presion_entrada_hornoValue,
+                        "Alimentacion al Horno": alimentacion_hornoValue,
+                        "Aire Secundario": aire_secundarioValue,
+                        "Zona de Sinterizacion": zona_sinterizacionValue,
+                        "% Error de las Balanzas de Carbon": error_balanzas_carbonValue,
+                        "Inyeccion de Carbon": inyeccion_carbonValue,
+                        "Potencia Motor del Horno": potencia_motor_hornoValue,
+
+                        // Quemador
+                        "Regleta Swirl" : regleta_swirlValue,
+                        "Aire Primario" : aire_primarioValue,
+
+                        // Enfriador
+                        "Presion del Cabezal" : presion_cabezalValue,
+                        "Presion Cama Enfriador" : presion_cama_enfriadorValue,
+                        "T° del Clinker" : temperatura_clinkerValue,
+                        "Flujo de aire / Kg Clinker" : flujo_aire_clinkerValue,
+
+                        // Molino 3
+                        "Flujo Ventilador (M3)" : flujo_ventilador_m3Value,
+                        "Presion Hidraulica (M3)" : presion_hidraulica_m3Value,
+                        "Presion de Succion (M3)" : presion_succion_m3Value,
+                        "Presion Diferencial de Molino (M3)" : presion_diferencial_molino_m3Value,
+                        "Temperatura Gases Salida Molino (M3)" : temperatura_gases_salida_molino_m3Value,
+                        "Inyeccion de Agua a Molino (M3)" : inyeccion_agua_molino_m3Value,
+                        "Inyeccion de Aditivo (M3)" : inyeccion_aditivo_m3Value,
+                        "Velocidad de Clasificador (M3)" : velocidad_clasificador_m3Value,
+                        "Alimentacion a Molino (M3)" : alimentacion_molino_m3Value,
+                        "Potencia Motor Principal (M3)" : potencia_motor_principal_m3Value,
+                        
+                        // Molino 3
+                        "Flujo Ventilador (M7)" : flujo_ventilador_m7Value,
+                        "Presion Hidraulica (M7)" : presion_hidraulica_m7Value,
+                        "Presion de Succion (M7)" : presion_succion_m7Value,
+                        "Presion Diferencial de Molino (M7)" : presion_diferencial_molino_m7Value,
+                        "Temperatura Gases Salida Molino (M7)" : temperatura_gases_salida_molino_m7Value,
+                        "Inyeccion de Agua a Molino (M7)" : inyeccion_agua_molino_m7Value,
+                        "Inyeccion de Aditivo (M7)" : inyeccion_aditivo_m7Value,
+                        "Velocidad de Clasificador (M7)" : velocidad_clasificador_m7Value,
+                        "Alimentacion a Molino (M7)" : alimentacion_molino_m7Value,
+                        "Potencia Motor Principal (M7)" : potencia_motor_principal_m7Value,
+                        
+                        // Ins gen molinos
+                        "Altura de las Toberas de Agua con respecto a la mesa" : altura_toberas_mesaValue,
+                        "Inclinacion de Placas del Armor Ring" : incl_placas_armor_ringValue,
+                        "Inclinacion de Placas del Lourve Ring" : incl_placas_lourve_ringValue,
+                        "Verificar Tapas debajo de los 4 rodillos" : verificar_tapas_rodillosValue,
+                        "Verificar Presión de los Acumuladores" : verificar_presion_acumuladoresValue,
+                        "Altura de Dam Ring" : altura_dam_ringValue,
+
+                        // Ins gen clas
+                        "Revisar el Sello de Alta Eficiencia" : revisar_selloValue,
+                        "Revisar y Verificar distancia de los Alabes" : verificar_distancia_alabesValue,
+                        
+                        // Camara central
+                        "¿Exceso de material? (Camara de secado)" : exceso_materialValue,
+                        "¿Presencia de bola o chatarra? (Camara de secado)" : presencia_bolaValue,
+                        "¿Es bueno el estado de los levantadores? (Camara de secado)" : estado_levantadoresValue,
+                        "¿Es bueno el estado de la helice? (Camara de secado)" : estado_heliceValue,
+
+                        // Espejo entrada
+                        "¿Roturas en el espejo de entrada?" : roturas_espejoValue,
+
+                        // Cono de entrada
+                        "¿Problemas para introducir el material en el molino?" : problemas_material_molinoValue,
+                        
+                        // Blindaje 1° camara
+                        "¿Roturas en el blindaje de la 1° camara?" : roturas_blin_1_camValue,
+                        "Levantamiento (Camara 1)" : levantamiento_cam_1Value,
+                        "¿Se observa coatting en la bola de la camara 1?" : coating_bola_cam_1Value,
+                        "¿Se observa mucha chatarra en la camara 1?" : chatarra_cam_1Value,
+                        "¿Orientacion del levantamiento acorde al sentido de giro? (Camara 1)" : orientacion_levantamiento_cam_1Value,
+                        "¿Se observa bola de segunda en esta camara? (Camara 1)" : bola_segunda_cam_1Value,
+                        "Grado de llenado de la camara 1" : grado_llenado_cam_1Value,
+                        "¿Presencia de chatarra incrustada en el blindaje de la camara 1?" : chatarra_incrustada_blin_cam_1Value,
+                        "¿Presencia de inmolidos en la camara 1?" : inmolidos_cam_1Value,
+                        
+                        // Tabique central
+                        "¿Roturas en el tabique central?" : roturas_tabique_centralValue,
+                        "¿Hay roturas en la rejilla central y/o ranuras? (Tabique central)" : roturas_rejilla_centralValue,
+                        "¿La rejilla central y/o ranuras estan tapadas? (Tabique central)" : rejilla_tapada_centralValue,
+                        "¿La altura de comienzo de la rejilla limita el grado de llenado que se podria por motor? (Tabique central)" : altura_rejilla_centralValue,
+                        "Luz de paso del tabique central (mm)" : luz_tabique_centralValue,
+
+                        // Blindaje 2° camara
+                        "¿Roturas en el blindaje de la 2° camara?" : roturas_blin_cam_2Value,
+                        "¿Se mantiene una buena clasificacion de bolas en la camara? (Camara 2)" : clasificacion_bolas_cam_2Value,
+                        "¿Se observa coatting en la bola de la camara 2?" : coatting_cam_2Value,
+                        "¿Se observa mucha chatarra en la camara 2?" : chatarra_cam_2Value,
+                        "¿Se observa bola de primera en esta camara? (Camara 2)" : bola_primera_cam_2Value,
+                        "Grado de llenado de la camara 2" : grado_llenado_cam_2Value,
+                        "¿Presencia de chatarra incrustada en el blindaje de la camara 2?" : chatarra_incrustada_cam_2Value,
+                        "¿Presencia de inmolidos en la camara 2?" : inmolidos_cam_2Value,
+
+                        // Tabique de salida
+                        "¿Roturas en el tabique de salida?" : roturas_tabique_salidaValue,
+                        "¿Hay roturas en la rejilla central y/o ranuras? (Tabique de salida)" : roturas_rejilla_salidaValue,
+                        "¿La rejilla central y/o ranuras estan tapadas? (Tabique de salida)" : rejilla_tapada_salidaValue,
+                        "La altura de comienzo de la rejilla limita el grado de llenado que se podria por motor (Tabique de salida)" : altura_rejilla_salidaValue,
+                        "Luz de paso del tabique de salida (mm)" : luz_tabique_salidaValue,
+
+                        // Inyec de agua a la salida
+                        "¿Boquilla taponada? (Inyec. agua de salida)" : boquilla_taponadaValue,
+                        "¿Orienta hacia el material? (Inyec. agua de salida)" : orienta_materialValue,
+                        "¿Llega al tabique intermedio? (Inyec. agua de salida)" : llega_tabiqueValue,
+                        "¿Atomiza bien? (Inyec. agua de salida)" : atomiza_bienValue,
+
+                        // Aire falso
+                        "¿Hay entrada de aire o fuga de material por la junta con el molino? (Aire falso)" : entrada_aire_falsoValue,
+                        "¿Hay buen cierre por la esclusa hacia el aero o rosca de salida? (Aire falso)" : cierre_esclusa_aeroValue,
+                        
+                        // Ventilacion del molino
+                        "Caudal (m3/h)" : caudalValue,
+                        "Diametro de molino" : diametro_molinoValue,
+                        "Grado de llenado" : grado_llenadoValue,
+                        "Velocidad (m/s)" : velocidadValue,
+                        "% mat. en flotacion" : porcentaje_flotacionValue,
+
+                        // Aire falso entre dos puntos
+                        "Oxigeno a la entrada" : oxigeno_entradaValue,
+                        "Oxigeno a la salida" : oxigeno_salidaValue,
+                        "Caudal a la salida (m3/h)" : caudal_salidaValue,
+                        "Caudal aire falso (m3/h)" : caudal_aire_falsoValue,
+                        "% Aire falso" : porcentaje_aire_falsoValue,
+                    })
+                });
+                
+                localStorage.setItem('tem_riserValue', '');
+                localStorage.setItem('tem_ent_calValue', '');
+                localStorage.setItem('tem_ter_ent_calValue', '');
+                localStorage.setItem('tem_cic_ivValue', '');
+                localStorage.setItem('tem_gas_cic_ivValue', '');
+                localStorage.setItem('tem_cic_gemValue', '');
+                localStorage.setItem('ana_sal_torValue', '');
+                localStorage.setItem('vel_id_fanValue', '');
+                localStorage.setItem('pres_sal_gas_idValue', '');
+                localStorage.setItem('dam_air_terValue', '');
+                localStorage.setItem('entrada_hornoValue', '');
+                localStorage.setItem('grado_llenado_hornoValue', '');
+                localStorage.setItem('oxigenoValue', '');
+                localStorage.setItem('coValue', '');
+                localStorage.setItem('presion_entrada_hornoValue', '');
+                localStorage.setItem('alimentacion_hornoValue', '');
+                localStorage.setItem('aire_secundarioValue', '');
+                localStorage.setItem('zona_sinterizacionValue', '');
+                localStorage.setItem('error_balanzas_carbonValue', '');
+                localStorage.setItem('inyeccion_carbonValue', '');
+                localStorage.setItem('potencia_motor_hornoValue', '');
+                localStorage.setItem('regleta_swirlValue', '');
+                localStorage.setItem('aire_primarioValue', '');
+                localStorage.setItem('presion_cabezalValue', '');
+                localStorage.setItem('presion_cama_enfriadorValue', '');
+                localStorage.setItem('temperatura_clinkerValue', '');
+                localStorage.setItem('flujo_aire_clinkerValue', '');
+                localStorage.setItem('flujo_ventilador_m3Value', '');
+                localStorage.setItem('presion_hidraulica_m3Value', '');
+                localStorage.setItem('presion_succion_m3Value', '');
+                localStorage.setItem('presion_diferencial_molino_m3Value', '');
+                localStorage.setItem('temperatura_gases_salida_molino_m3Value', '');
+                localStorage.setItem('inyeccion_agua_molino_m3Value', '');
+                localStorage.setItem('inyeccion_aditivo_m3Value', '');
+                localStorage.setItem('velocidad_clasificador_m3Value', '');
+                localStorage.setItem('alimentacion_molino_m3Value', '');
+                localStorage.setItem('potencia_motor_principal_m3Value', '');
+                localStorage.setItem('flujo_ventilador_m7Value', '');
+                localStorage.setItem('presion_hidraulica_m7Value', '');
+                localStorage.setItem('presion_succion_m7Value', '');
+                localStorage.setItem('presion_diferencial_molino_m7Value', '');
+                localStorage.setItem('temperatura_gases_salida_molino_m7Value', '');
+                localStorage.setItem('inyeccion_agua_molino_m7Value', '');
+                localStorage.setItem('inyeccion_aditivo_m7Value', '');
+                localStorage.setItem('velocidad_clasificador_m7Value', '');
+                localStorage.setItem('alimentacion_molino_m7Value', '');
+                localStorage.setItem('potencia_motor_principal_m7Value', '');
+                localStorage.setItem('altura_toberas_mesaValue', '');
+                localStorage.setItem('incl_placas_armor_ringValue', '');
+                localStorage.setItem('incl_placas_lourve_ringValue', '');
+                localStorage.setItem('verificar_tapas_rodillosValue', '');
+                localStorage.setItem('verificar_presion_acumuladoresValue', '');
+                localStorage.setItem('altura_dam_ringValue', '');
+                localStorage.setItem('revisar_selloValue', '');
+                localStorage.setItem('verificar_distancia_alabesValue', '');
+                localStorage.setItem('exceso_materialValue', '');
+                localStorage.setItem('presencia_bolaValue', '');
+                localStorage.setItem('estado_levantadoresValue', '');
+                localStorage.setItem('estado_heliceValue', '');
+                localStorage.setItem('roturas_espejoValue', '');
+                localStorage.setItem('problemas_material_molinoValue', '');
+                localStorage.setItem('roturas_blin_1_cam', '');
+                localStorage.setItem('levantamiento_cam_1', '');
+                localStorage.setItem('coating_bola_cam_1', '');
+                localStorage.setItem('chatarra_cam_1', '');
+                localStorage.setItem('orientacion_levantamiento_cam_1', '');
+                localStorage.setItem('bola_segunda_cam_1', '');
+                localStorage.setItem('grado_llenado_cam_1', '');
+                localStorage.setItem('chatarra_incrustada_blin_cam_1', '');
+                localStorage.setItem('inmolidos_cam_1', '');
+                localStorage.setItem('roturas_tabique_centralValue', '');
+                localStorage.setItem('roturas_rejilla_centralValue', '');
+                localStorage.setItem('rejilla_tapada_centralValue', '');
+                localStorage.setItem('altura_rejilla_centralValue', '');
+                localStorage.setItem('luz_tabique_centralValue', '');
+                localStorage.setItem('roturas_blin_cam_2Value',  '');
+                localStorage.setItem('clasificacion_bolas_cam_2Value', '');
+                localStorage.setItem('coatting_cam_2Value', '');
+                localStorage.setItem('chatarra_cam_2Value', '');
+                localStorage.setItem('bola_primera_cam_2Value', '');
+                localStorage.setItem('grado_llenado_cam_2Value', '');
+                localStorage.setItem('chatarra_incrustada_cam_2Value', '');
+                localStorage.setItem('inmolidos_cam_2Value', '');
+                localStorage.setItem('roturas_tabique_salidaValue', '');
+                localStorage.setItem('roturas_rejilla_salidaValue', '');
+                localStorage.setItem('rejilla_tapada_salidaValue', '');
+                localStorage.setItem('altura_rejilla_salidaValue', '');
+                localStorage.setItem('luz_tabique_salidaValue', '');
+                localStorage.setItem('boquilla_taponadaValue', '');
+                localStorage.setItem('orienta_materialValue', '');
+                localStorage.setItem('llega_tabiqueValue', '');
+                localStorage.setItem('atomiza_bienValue', '');
+                localStorage.setItem('entrada_aire_falsoValue', '');
+                localStorage.setItem('cierre_esclusa_aeroValue', '');
+                localStorage.setItem('caudalValue', '');
+                localStorage.setItem('diametro_molinoValue', '');
+                localStorage.setItem('grado_llenadoValue', '');
+                localStorage.setItem('velocidadValue',  '');
+                localStorage.setItem('porcentaje_flotacionValue', '');
+                localStorage.setItem('oxigeno_entradaValue', '');
+                localStorage.setItem('oxigeno_salidaValue', '');
+                localStorage.setItem('caudal_salidaValue', '');
+                localStorage.setItem('caudal_aire_falsoValue', '');
+                localStorage.setItem('porcentaje_aire_falsoValue', '');
+
+                const contenido = await respuesta.json();
+                console.log(contenido);
+                const modal = document.getElementById('confirmacionModal');
+                modal.classList.add('hidden');
+                verAlerta('¡Datos enviados correctamente!');
+            } catch (error) {
+                console.log(error);
+                alert('Ocurrió un error al enviar los datos. Por favor, inténtelo nuevamente.');
+            } finally {
+                enviarConfirmacionButton.textContent = 'Enviar datos al registro';
+                enviarConfirmacionButton.classList.remove('bg-purple-400');
+                enviarConfirmacionButton.classList.add('bg-purple-600');
+                enviarConfirmacionButton.disabled = false;
+            }
+        });
+
+        // Templates
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        const contentDiv = document.getElementById('content');
+        const instances = document.querySelectorAll('.instance');
+
+        instances.forEach(instance => {
+            instance.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('data-target');
+                const template = document.getElementById(targetId);
+                const botonenviarDatos = document.getElementById('enviarDatos');
+                botonenviarDatos.classList.remove('hidden')
+
+                if (template) {
+                    const clonedContent = document.importNode(template.content, true);
+                    contentDiv.innerHTML = '';
+                    contentDiv.appendChild(clonedContent);
+                    const mainSection = document.getElementById('mainSection');
+                    mainSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    console.error('El template con el ID especificado no fue encontrado.');
+                }
+            });
+        });
+    });
+    </script>
+</MainLayout>

@@ -1,0 +1,33 @@
+* {
+    font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bonder {
+    font-weight: 700;
+}
+
+.banner {
+    background-image: url('/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(3, 3, 3, 0.5);
+}
+
+.bg {
+    background-color: #15458E;
+}
+
+.back {
+    background-color: #15458E;
+    box-shadow: inset 0 0 0 4000px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+    .btn-imagen {
+        min-width: 110px;
+        font-size: 14px;
+        padding: 0.2rem 0.3rem;
+    }
+}
